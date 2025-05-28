@@ -9,7 +9,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>DivHacks 2024</title>
+    <title>DivHacks 2025</title>
 
     <!-- STYLES -->
     <link rel="icon" href="assets/newlogo.png">
@@ -28,6 +28,7 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
@@ -72,6 +73,7 @@
     </script>
   </head>
 
+  <!-- MLH Trust Badge  (commented out for now 3/28/25, need to be updated)
   <a
     id="mlh-trust-badge"
     style="
@@ -91,6 +93,7 @@
       alt="Major League Hacking 2024 Hackathon Season"
       style="width: 100%"
   /></a>
+-->
 
   <nav class="navbar navbar-expand-lg sticky-top navbar-dark navbar-custom" id = "myTopnav">
     <div class="container-fluid nav-container-custom">
@@ -104,11 +107,12 @@
         <div class="navbar-nav ms-auto">
           <a class="nav-link nav-link-custom" id = "nav-home" ref="#">HOME</a>
           <a class="nav-link nav-link-custom" id = "nav-about" href="#about">ABOUT</a>
-          <a class="nav-link nav-link-custom" id = "nav-sponsor" href="#sponsor">SPONSOR US</a>
+          <!--<a class="nav-link nav-link-custom" id = "nav-sponsor" href="#sponsor">SPONSOR US</a>
           <a class="nav-link nav-link-custom" id = "nav-sponsor" href="#judges">JUDGES</a>
           <a class="nav-link nav-link-custom" id = "nav-schedule" href="#schedule">SCHEDULE</a>
-          <a class="nav-link nav-link-custom" id = "nav-team" href="#team">TEAM</a>
+          <a class="nav-link nav-link-custom" id = "nav-team" href="#team">TEAM</a>-->
           <a class="nav-link nav-link-custom" id = "nav-faq"href="#faq">FAQs</a>
+          <!-- 
           <a
             class="nav-link nav-link-custom"
             target="_blank"
@@ -123,6 +127,7 @@
             href="https://forms.gle/iT4nppXDMrDLqc8q7"
             >APPLY</a
           >
+          -->
         </div>
       </div>
     </div>
@@ -132,10 +137,10 @@
   <div class="row section" id="home">
     <!-- <img src="assets/temp_stars.png" id="stars" /> -->
     <!-- <img src="assets/temp_moon.png" id="moon" /> -->
-
+    <!--
     <img src="assets/new-bg/3.png" id="mountains_foreground_left" />
     <img src="assets/new-bg/4.png" id="mountains_foreground_right" />
-
+  -->
     <!-- <img
       src="assets/new-bg/newbg.png"
       id="landing-img"
@@ -155,13 +160,13 @@
     <br>
     <br>
       <h1>
-        <b>DIVHACKS 2024</b>
+        <b>DIVHACKS 2025</b>
       </h1>
       <!---->
-      <h2 id="landing">OCTOBER 5-6TH</h2>
-      <div class="apply-button-container">
+      <h2 id="landing">OCTOBER 4-5TH</h2>
+      <!-- <div class="apply-button-container">
         <a target="_blank" href="https://forms.gle/iT4nppXDMrDLqc8q7" class="apply-button">APPLY NOW</a>
-      </div>
+      </div> -->
       
       <div class="countdown-container">
         <!-- <h2 id="countdown-title">Countdown to DivHacks:</h2> -->
@@ -187,11 +192,11 @@
           dd = String(today.getDate()).padStart(2, "0"),
           mm = String(today.getMonth() + 1).padStart(2, "0"),
           yyyy = today.getFullYear(),
-          DivhacksDay = "10/05/2024";
+          DivhacksDay = "10/04/2025";
       
       today = mm + "/" + dd + "/" + yyyy;
       if (today > DivhacksDay) {
-        DivhacksDay = dayMonth + nextYear;
+        DivhacksDay = "10/04/" + (yyyy + 1);
       }
       
       const countDown = new Date(DivhacksDay).getTime(),
@@ -213,43 +218,12 @@
               clearInterval(x);
             }
             //seconds
-          }, 0)
+          }, 1000)
       }());</script>
     
     <!-- <div class="countdown-container">
     <p id="countdown"></p>
   </div> -->
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Oct 5, 2024 12:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "DONE";
-  }
-}, 1000);
-</script>
 
   </div>
   <!-- =============================== About Divhacks ===============================-->
@@ -282,183 +256,78 @@ var x = setInterval(function() {
     <h2><b>TRACKS</b></h2>
 
     <div class="component_div_left">
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <p>Education</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                  <img src="assets/square_sprites/edu.png" alt="Education Track" class="track-img" />
-                </div>
+      <div class="track-card">
+        <div class="track-content">
+          <p>Productivity</p>
+          <!-- <div class="component">
+            <div class="carousel_executive carousel_style">
+              <div class="slide">
+                <img src="assets/square_sprites/edu.png" alt="Education Track" class="track-img" />
               </div>
             </div>
-          </div>
-          <div class="flip-card-back">
-            <p>Education</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                 <h5>From AI-driven tutoring to gamified learning platforms, this is your chance to craft innovative 
-                  tools that empower students and educators alike. Whether you're passionate about breaking down 
-                  barriers to education or enhancing classroom engagement, this track is your canvas for creating
-                   impactful, tech-driven solutions.</h5>
-                </div>
-              </div>
-            </div>
+          </div> -->
+          <div class="track-description">
+            <h5>Build tools that help people work smarter, live healthier, and learn better– whether in school, the workplace, or everyday life. Empower people to do more in less time.</h5>
           </div>
         </div>
       </div>
     </div>
 
     <div class="component_div_right">
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <p>Environment</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                  <img src="assets/square_sprites/envi.png" alt="Environment Track" class="track-img" />
-                </div>
+      <div class="track-card">
+        <div class="track-content">
+          <p>Sustainability</p>
+          <!-- <div class="component">
+            <div class="carousel_executive carousel_style">
+              <div class="slide">
+                <img src="assets/square_sprites/envi.png" alt="Environment Track" class="track-img" />
               </div>
             </div>
-          </div>
-          <div class="flip-card-back">
-            <p>Environment Track</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                 <h5>Address today's most urgent ecological challenges; whether it's leveraging technology for 
-                  climate change mitigation, or developing tools for biodiversity conservation, this is your 
-                    chance to make a real impact. This track empowers you to design transformative solutions for a healthier planet.</h5>
-                </div>
-              </div>
-            </div>
+          </div> -->
+          <div class="track-description">
+            <h5>Develop solutions for a greener future, from fighting climate change to improving public health. Think global impact, local action, and tech that drives real social good.</h5>
           </div>
         </div>
       </div>
     </div>
 
     <div class="component_div_left">
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <p>Health</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                  <img src="assets/square_sprites/health.png" alt="Education Track" class="track-img" />
-                </div>
+      <div class="track-card">
+        <div class="track-content">
+          <p>Entertainment</p>
+          <!-- <div class="component">
+            <div class="carousel_executive carousel_style">
+              <div class="slide">
+                <img src="assets/square_sprites/health.png" alt="Health Track" class="track-img" />
               </div>
             </div>
-          </div>
-          <div class="flip-card-back">
-            <p>Health</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                 <h5>Tackle pressing health challenges by harnessing technology to enhance patient care, improve mental health, 
-                  and promote overall well-being. Whether you’re developing apps for chronic disease management, creating solutions 
-                  for mental health support, or exploring telemedicine advancements, this is your opportunity 
-                  to help shape a healthier future!</h5>
-                </div>
-              </div>
-            </div>
+          </div> -->
+          <div class="track-description">
+            <h5>Create the next generation of fun—whether it’s games, social platforms, or immersive experiences. Redefine how people play, connect, and express themselves.</h5>
           </div>
         </div>
       </div>
     </div>
 
     <div class="component_div_right">
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <p>Fashion</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                  <img src="assets/square_sprites/fashion.png" alt="Environment Track" class="track-img" />
-                </div>
+      <div class="track-card">
+        <div class="track-content">
+          <p>Emerging Technology</p>
+          <!-- <div class="component">
+            <div class="carousel_executive carousel_style">
+              <div class="slide">
+                <img src="assets/square_sprites/fashion.png" alt="Fashion Track" class="track-img" />
               </div>
             </div>
-          </div>
-          <div class="flip-card-back">
-            <p>Fashion</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                 <h5>Address today's most pressing industry challenges! Whether leveraging technology for sustainable fashion, 
-                  developing tools for circular economies, analyzing ethical production practices, or tracking fast fashion 
-                  carbon footprints, this track focuses on how to create a more sustainable and ethical fashion industry.</h5>
-                </div>
-              </div>
-            </div>
+          </div> -->
+          <div class="track-description">
+            <h5>Experiment with cutting-edge technology like AI/ML, autonomous systems, spatial computing, XR (VR/AR). Build the unexpected and shape what’s next. </h5>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="component_div_left">
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <p>Media</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                  <img src="assets/square_sprites/art.png" alt="Media Track" class="track-img" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flip-card-back">
-            <p>Media</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                 <h5>From AI-powered content and personalized media to immersive AR/VR art, this track is for innovators 
-                  ready to revolutionize news, entertainment, and artistic expression. Tackle challenges like 
-                  visual analysis, create new storytelling platforms, and reimagine the intersection of art and media 
-                  in the digital age.
-                </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="component_div_right">
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <p>Civic</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                  <img src="assets/square_sprites/civic.png" alt="Environment Track" class="track-img" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flip-card-back">
-            <p>Civc</p>
-            <div class="component">
-              <div class="carousel_executive carousel_style">
-                <div class="slide">
-                 <h5>Presenting our Civic Track, where tech meets public service! Tackle key civic issues 
-                  by using innovation to strengthen communities, influence policy, and boost civic involvement. 
-                  Design platforms for grassroots movements, develop tools for enhancing voter engagement, through this track!</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  
     <!-- Repeat for other tracks: Media, Fashion, Civic, Health -->
 
   </div>
@@ -645,8 +514,9 @@ var x = setInterval(function() {
         </div>"
       </div> -->
 
+      <!-- commented out for now 3/28/25 
 
-  <!-- =============================== Judges =============================== --> 
+ =============================== Judges =============================== 
    <div class="row-section" id="judges">
     <div class="card" id="about-text">
       <h2> <b>JUDGES</b> </h2>
@@ -733,14 +603,14 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
   </script>
 
 
- <!-- =============================== Openning speakers =============================== --> 
+=============================== Openning speakers =============================== 
  <div class="row-section" id="judges">
   <div class="card" id="about-text">
     <h2> <b>OPENING SPEAKERS</b> </h2>
     <div class="component">
       <div class="carousel_judges carousel_style">
         <div class="slide_judges">
-          <!-- <a href="https://www.linkedin.com/in/rishabhmthakur/" target="_blank"> -->
+           <a href="https://www.linkedin.com/in/rishabhmthakur/" target="_blank">
             <img src="assets/speaker_profile/rebecca_wright.svg" alt="rebecca profile"/>
           </a>
         </div>
@@ -751,7 +621,7 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
     <div class="component">
       <div class="carousel_judges carousel_style">
         <div class="slide_judges">
-          <!-- <a href="https://www.linkedin.com/in/rishabhmthakur/" target="_blank"> -->
+      <a href="https://www.linkedin.com/in/rishabhmthakur/" target="_blank"> 
             <img src="assets/speaker_profile/yasin_ehsan.svg" alt="yasin profile"/>
           </a>
         </div>
@@ -762,7 +632,7 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
  </div>
 
 
-  <!-- =============================== Schedule =============================== -->
+=============================== Schedule =============================== 
   <div class="row-section" id="schedule">
     <div class="card" id="about-text">
       <h2>
@@ -779,6 +649,7 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
     </div>
   </div>
 
+--> 
 
 
   <!-- =============================== FAQs =============================== -->
@@ -912,7 +783,7 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
   </script>
   <!-- =============================== End of FAQs =============================== -->
 
-    <!-- =============================== Sponsorship =============================== -->
+    <!-- =============================== Sponsorship =============================== (commented out for now 3/28/25)
     <div class="row-section" id="sponsor">
       <div class="card" id="about-text">
         <h2>
@@ -925,9 +796,9 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
         </div>
       </div>
     </div>
+  -->
 
-
-    <!-- =============================== Meet the Team =============================== -->
+    <!-- =============================== Meet the Team =============================== (commented out for now 3/28/25)
   <div class="row-section" id="team">
     <div class="card" id="about-text">
       <h2>
@@ -1085,11 +956,11 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
               <img src="assets/profiles/hx_leah.svg" alt="leah profile" />
             </a>
             </div>
-            <!-- <div class="slide">
+            <div class="slide">
               <a href="https://www.linkedin.com/in/anna-reis-a418a61a4/" target="_blank">
               <img src="assets/profiles/hx_anna.svg" alt="anna profile" />
             </a>
-            </div> -->
+            </div>
             <div class="slide">
               <a href="https://www.linkedin.com/in/lucyking140/" target="_blank">
               <img src="assets/profiles/hx_lucy.svg" alt="lucy profile" />
@@ -1244,11 +1115,12 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
     </div>
   </div>
 
-  <!-- Meet the team scrolling -->
+  Meet the team scrolling 
 <div class="spacer"></div>
   
+ --> 
   <!-- Footer Section -->
-
+  <!--
   <footer class="footer">
     <a
       id="footer-text"
@@ -1263,6 +1135,7 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
       <a href="https://twitter.com/divhacks"><img id="contact-icon" src="assets/twitter-icon.png" alt="Twitter"></a>
   </div>
   </footer>
+  -->
 
   <script>
     // Parallax Scrolling functionality ===============================================================

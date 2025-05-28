@@ -21,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Jersey 10", sans-serif;
+  font-family: "Archivo Black", sans-serif;
 }
 
 .jersey-10-regular {
@@ -88,89 +88,70 @@ h6 {
 }
 
 /* Hover effect for component_div_left and component_div_right in the tracks section */
-.flip-card:hover {
-  box-shadow: 0 5px 20px rgb(84, 54, 149); /* Shadow effect on hover */
-}
-/* Optional: Add some padding and margin to ensure the hover effect looks good */
-.flip-card {
+.track-card {
   background-color: transparent;
-  width: 100%; /* Adjust width as needed */
-  height: 300px; /* Adjust height as needed */
-  perspective: 1000px; /* Add perspective */
-  display: inline-block; /* Allow cards to align side by side */
-}
-
-.flip-card-inner {
-  position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d; /* Preserve 3D space */
-}
-
-.flip-card-front,
-.flip-card-back {
-  padding: 0; /* Remove padding to bring text closer to edges */
-  margin: 0; /* Remove margin if any */
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; /* Hide back side when facing front */
-}
-
-.flip-card-back p {
-  margin-bottom: 10px; /* Remove bottom margin */
-  padding-bottom: 0; /* Remove bottom padding */
-}
-.flip-card-back h5{
-  font-size: 19px;
-  padding-left: -10;  /* Remove left padding */
-  padding-right: -10; /* Remove right padding */
-  margin: 0;  /* Remove margin */
-  text-align: center; /* Optional: center-align text */
+  display: inline-block;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-.flip-card-front {
-  /*background-color: #fff; /* Front side background */
-  color: black; /* Front side text color */
+.track-card:hover {
+  box-shadow: 0 5px 20px rgb(84, 54, 149);
 }
 
-.flip-card-back {
-  /*background-color: #f9f9f9; /* Back side background */
-  color: black; /* Back side text color */
-  transform: rotateY(180deg); /* Flip back side */
+.track-content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 222, 250, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
-.flipped .flip-card-inner {
-  transform: rotateY(180deg); /* Rotate when flipped */
+.track-description {
+  flex: 1;
+  margin-top: 15px;
+  padding: 10px;
+  overflow-y: auto;
 }
 
-
+.track-description h5 {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Archivo Black", sans-serif;
+  line-height: 1.4;
+}
 
 .track-img {
-  width: 50%;           /* Ensures the image takes up the full width of the container */
-  max-width: 200px;      /* Sets a maximum width for the images */
-  height: auto;          /* Maintains the aspect ratio */
-  max-height: 200px;     /* Sets a maximum height for the images */
-  object-fit: contain;   /* Ensures the image fits within the defined size without distortion */
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
   display: block;
-  margin: 0 auto;        /* Centers the image */
+  margin: 0 auto;
   padding-bottom: 5%;
 }
 
 .card {
   text-align: center;
-  position: relative; /* Position relative to allow absolute positioning of card::before */
-  width: 65%; /* 50% width of the page */
-  padding: 0px; /* Padding inside the card (left right)*/
-  box-shadow: 0 4px 8px rgba(226, 94, 154, 0.1); /* Optional: Adds a subtle shadow for a lifted effect */
-  border-radius: 10px; /* rounded corners */
-  margin-top: 5%; /* Margin outside the card to create buffer space */
+  position: relative;
+  width: 65%;
+  padding: 0px;
+  box-shadow: 0 4px 8px rgba(226, 94, 154, 0.1);
+  border-radius: 10px;
+  margin-top: 5%;
   margin-bottom: 5%;
-  box-sizing: border-box; /*Ensures padding and margin are included in the width calculation*/
-  overflow: hidden; /* Ensures the pseudo-element does not overflow */
-  background-color: transparent; /* Make sure the card itself is transparent */
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: transparent;
 }
 
 .card::before {
@@ -180,10 +161,10 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: white; /* Background color for the pseudo-element */
-  opacity: 0.5; /* 50% opacity for the background */
-  border-radius: 10px; /* Same border radius as the .card */
-  z-index: -1; /* Places the pseudo-element behind the text */
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 10px;
+  z-index: -1;
 }
 
 @font-face {
@@ -216,17 +197,17 @@ html {
 
 h1 {
   color: rgb(36, 16, 48);
-  text-align: center;
+  text-align: left;
   letter-spacing: 12px;
-  font-size: 11vw;
-  font-family: "Jersey 10", sans-serif;
+  font-size: 8vw;
+  font-family: "Archivo Black", sans-serif;
 }
 
 h2,
 h3,
 p {
   color: rgb(49, 21, 65);
-  font-family: "Jersey 10", sans-serif;
+  font-family: "Archivo Black", sans-serif;
 }
 
 #footer-text {
@@ -393,18 +374,16 @@ a:hover {
 } */
 
 .navbar-custom {
-  font-family: "Bungee", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Archivo Black", sans-serif;
   overflow: hidden;
-  background-color: var(--nav-bg);
+  background-color: white;
   position: sticky;
   width: 100%;
-  text-align: right; /* Align navbar links to the right */
+  text-align: right;
   padding-bottom: 20px;
 }
 .navbar-custom a {
-  /*display: inline-block; /* Display navbar links inline */
-  color: white;
+  color: rgb(49, 21, 65);
   padding: 14px 20px;
 }
 
@@ -503,7 +482,7 @@ a:hover {
 }
 
 body {
-  background-image: url("assets/new_website_bg.png");
+  background-image: url("assets/background.avif");
   background-size: cover; /* or contain, depending on your needs */
   background-repeat: no-repeat;
   background-position: center top; /* Adjust as necessary */
@@ -744,7 +723,7 @@ body {
 .accordion {
   background-color: white;
   color: rgb(49, 21, 65);
-  font-family: "Jersey 10", sans-serif;
+  font-family: "Archivo Black", sans-serif;
   cursor: pointer;
   font-size: 2.3vw;
   width: 100%;
@@ -880,6 +859,7 @@ body {
 .component_div_left {
   float: left;
   width: 44.5%;
+  height: 350px;
   background-color: rgba(244, 222, 250);
   border-radius: 10px;
   margin-left: 3%;
@@ -889,6 +869,7 @@ body {
 .component_div_right {
   float: right;
   width: 44.5%;
+  height: 350px;
   background-color: rgba(244, 222, 250);
   border-radius: 10px;
   margin-right: 3%;
@@ -964,7 +945,7 @@ body {
 }
 
 #clock-container {
-  font-family: "Jersey 10", sans-serif;
+  font-family: "Archivo Black", sans-serif;
 }
 
 #clock-container li {
