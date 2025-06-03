@@ -24,6 +24,37 @@ h6 {
   font-family: "Archivo Black", sans-serif;
 }
 
+/* NEW ANIMATED UNDERLINE */
+.nav-link-custom {
+  position: relative;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding-bottom: 4px; /* optional: reserves space for underline */
+  color: #ffffff !important;
+}
+
+/* prevent global hover shadow for nav links w/ '!important' */
+.nav-link-custom:hover {
+  text-shadow: none !important; /* Prevent global hover shadow */
+  color: #cfbdff !important; /* slightly darker version of base color */
+}
+
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: 4px;
+  left: 50%;
+  background-color: #cfbdff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link-custom:hover::after {
+  width: 80%;
+}
+
 .jersey-10-regular {
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
@@ -376,14 +407,14 @@ a:hover {
 .navbar-custom {
   font-family: "Archivo Black", sans-serif;
   overflow: hidden;
-  background-color: white;
+  background-color: transparent;
   position: sticky;
   width: 100%;
   text-align: right;
   padding-bottom: 20px;
 }
 .navbar-custom a {
-  color: rgb(49, 21, 65);
+  color: rgb(188, 132, 220);
   padding: 14px 20px;
 }
 
@@ -482,7 +513,8 @@ a:hover {
 }
 
 body {
-  background-image: url("assets/background.avif");
+  /*background: radial-gradient(circle at 30% 30%, #00f0ff, #7a00ff, #0a003d);*/
+  background-image: url("assets/abstract-blur-gradient-background-vector.jpg");
   background-size: cover; /* or contain, depending on your needs */
   background-repeat: no-repeat;
   background-position: center top; /* Adjust as necessary */
