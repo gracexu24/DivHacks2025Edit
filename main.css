@@ -24,6 +24,14 @@ h6 {
   font-family: "Archivo Black", sans-serif;
 }
 
+/* NEW emphasis COLOR */
+/*
+.highlight {
+  color: white;
+  font-weight: bold;
+}
+*/
+
 /* NEW ANIMATED UNDERLINE */
 .nav-link-custom {
   position: relative;
@@ -151,7 +159,7 @@ h6 {
 }
 
 .track-description h5 {
-  font-size: 14px;
+  font-size: 15px;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -349,6 +357,11 @@ a:hover {
   border-radius: 25px;
   padding: 5px;
   margin: 0px 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+#logo:hover {
+  transform: scale(1.05);
 }
 
 .link {
@@ -405,18 +418,25 @@ a:hover {
 } */
 
 .navbar-custom {
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* ensure it stays on top */
+  backdrop-filter: blur(8px); /* optional: adds a frosted glass effect */
+  background-color: transparent;
   font-family: "Archivo Black", sans-serif;
   overflow: hidden;
-  background-color: transparent;
   position: sticky;
   width: 100%;
   text-align: right;
   padding-bottom: 20px;
+  
 }
+
 .navbar-custom a {
   color: rgb(188, 132, 220);
   padding: 14px 20px;
 }
+
 
 .section-bg {
   width: 100%;
