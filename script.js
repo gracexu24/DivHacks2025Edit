@@ -133,3 +133,71 @@ function updateNumber(id, newValue) {
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown(); // Initial call
+
+// Scroll reveal animation
+function reveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  
+  reveals.forEach(element => {
+    const windowHeight = window.innerHeight;
+    const elementTop = element.getBoundingClientRect().top;
+    const elementVisible = 150;
+    
+    if (elementTop < windowHeight - elementVisible) {
+      element.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', reveal);
+
+// Parallax effect
+function parallax() {
+  const parallaxElements = document.querySelectorAll('.parallax-bg');
+  
+  parallaxElements.forEach(element => {
+    const scrolled = window.pageYOffset;
+    element.style.transform = `translateY(${scrolled * 0.5}px)`;
+  });
+}
+
+window.addEventListener('scroll', parallax);
+
+// Smooth scroll for navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Add reveal class to sections
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('section, .row-section');
+  sections.forEach(section => {
+    section.classList.add('reveal');
+  });
+});
+
+// Interactive cursor effect
+const cursor = document.createElement('div');
+cursor.classList.add('cursor');
+document.body.appendChild(cursor);
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+// Add hover effect to track cards
+document.querySelectorAll('.track-card').forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-10px)';
+  });
+  
+  card.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0)';
+  });
+});
