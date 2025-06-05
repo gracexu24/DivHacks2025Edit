@@ -1166,3 +1166,26 @@ body {
 
 
 }
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: -150px; /* Add negative margin to move it up */
+  padding-top: 50px; /* Add some padding to maintain spacing */
+}
+
+#about-text {
+  text-align: center;
+  position: relative;
+  width: 65%;
+  padding: 0px;
+  box-shadow: 0 4px 8px rgba(226, 94, 154, 0.1);
+  border-radius: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: transparent;
+}
