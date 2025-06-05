@@ -512,8 +512,15 @@ a:hover {
 
 #landing-title {
   position: absolute;
-  padding-bottom: 250px;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
   white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #landing-subtitle {
@@ -525,6 +532,8 @@ a:hover {
   text-shadow: rgba(62, 25, 108, 0.8) 2px 0 15px;
   z-index: 9;
   margin: 0;
+  font-size: 8vw;
+  text-align: center;
 }
 
 #home h2 {
@@ -532,6 +541,8 @@ a:hover {
   text-shadow: rgba(245, 121, 198, 0.8) 1px 0 10px;
   z-index: 9;
   margin: 0;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 body {
@@ -1012,6 +1023,7 @@ body {
   color: #333;
   margin: 0 auto;
   text-align: center;
+  width: 100%;
 }
 
 #countdown-title {
