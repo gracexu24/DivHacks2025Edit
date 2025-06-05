@@ -169,61 +169,16 @@
       </div> -->
       
       <div class="countdown-container">
-        <!-- <h2 id="countdown-title">Countdown to DivHacks:</h2> -->
         <div id="clock-container">
-          <ul id="">
-            <li><span id="days"></span>days</li>
-            <li><span id="hours"></span>Hours</li>
-            <li><span id="minutes"></span>Minutes</li>
-            <li><span id="seconds"></span>Seconds</li>
+          <ul>
+            <li><span id="days"></span><span class="label">days</span></li>
+            <li><span id="hours"></span><span class="label">Hours</span></li>
+            <li><span id="minutes"></span><span class="label">Minutes</span></li>
+            <li><span id="seconds"></span><span class="label">Seconds</span></li>
           </ul>
         </div>
       </div>
     </div>
-
-
-    <script>(function () {
-      const second = 1000,
-            minute = second * 60,
-            hour = minute * 60,
-            day = hour * 24;
-
-      let today = new Date(),
-          dd = String(today.getDate()).padStart(2, "0"),
-          mm = String(today.getMonth() + 1).padStart(2, "0"),
-          yyyy = today.getFullYear(),
-          DivhacksDay = "10/04/2025";
-      
-      today = mm + "/" + dd + "/" + yyyy;
-      if (today > DivhacksDay) {
-        DivhacksDay = "10/04/" + (yyyy + 1);
-      }
-      
-      const countDown = new Date(DivhacksDay).getTime(),
-          x = setInterval(function() {    
-    
-            const now = new Date().getTime(),
-                  distance = countDown - now;
-    
-            document.getElementById("days").innerText = Math.floor(distance / (day)),
-              document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-              document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-              document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-    
-            //do something later when date is reached
-            if (distance < 0) {
-              document.getElementById("countdown-title").innerText = "The Hackathon Has Begun!";
-              document.getElementById("clock-container").style.display = "none";
-              /*document.getElementById("content").style.display = "block";*/
-              clearInterval(x);
-            }
-            //seconds
-          }, 1000)
-      }());</script>
-    
-    <!-- <div class="countdown-container">
-    <p id="countdown"></p>
-  </div> -->
 
   </div>
   <!-- =============================== About Divhacks ===============================-->
@@ -303,7 +258,7 @@
             </div>
           </div> -->
           <div class="track-description">
-            <h5>Create the next generation of fun—whether it’s games, social platforms, or immersive experiences. Redefine how people play, connect, and express themselves.</h5>
+            <h5>Create the next generation of fun—whether it's games, social platforms, or immersive experiences. Redefine how people play, connect, and express themselves.</h5>
           </div>
         </div>
       </div>
@@ -321,7 +276,7 @@
             </div>
           </div> -->
           <div class="track-description">
-            <h5>Experiment with cutting-edge technology like AI/ML, autonomous systems, spatial computing, XR (VR/AR). Build the unexpected and shape what’s next. </h5>
+            <h5>Experiment with cutting-edge technology like AI/ML, autonomous systems, spatial computing, XR (VR/AR). Build the unexpected and shape what's next. </h5>
           </div>
         </div>
       </div>

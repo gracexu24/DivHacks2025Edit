@@ -1007,46 +1007,60 @@ body {
 }
 
 #clock-container {
-  font-family: "Archivo Black", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+#clock-container ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2rem;
 }
 
 #clock-container li {
-  display: inline-block;
-  font-size: 2.5em;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  list-style-type: none;
-  padding: 1em;
+  gap: 0.2rem;
+}
+
+#clock-container li span {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: rgba(245, 121, 198, 0.8) 1px 0 10px;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+#clock-container li span:first-child {
+  animation: numberChange 0.3s ease;
+}
+
+.label {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 0.7em;
   text-transform: uppercase;
   color: white;
   text-shadow: rgba(245, 121, 198, 0.8) 1px 0 10px;
   z-index: 9;
-  margin: 0;
+  margin-top: -0.3rem;
 }
 
-#clock-container li span {
-  display: block;
-  font-size: 4.5rem;
-}
-
-.apply-button {
-  letter-spacing: 3px;
-  padding: 10px 30px;
-  font-size: 3vw;
-  font-weight: bold;
-  font-family: "Jersey 10", sans-serif;
-  color: white;
-  background-color: rgba(174, 127, 206, 0.61);
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.apply-button:hover {
-  color: white !important; /* Ensures the text color stays white on hover */
-  background-color: #6c3683;
-
+@keyframes numberChange {
+  0% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* phone view */

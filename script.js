@@ -91,3 +91,45 @@
 //     });
 //     */
 // });
+
+// Countdown Timer with Fade Animation
+function updateCountdown() {
+  const countDown = new Date("10/04/2025").getTime();
+  const now = new Date().getTime();
+  const distance = countDown - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Update each number with animation
+  updateNumber("days", days);
+  updateNumber("hours", hours);
+  updateNumber("minutes", minutes);
+  updateNumber("seconds", seconds);
+
+  if (distance < 0) {
+    clearInterval(countdownInterval);
+    document.getElementById("countdown-title").innerText = "The Hackathon Has Begun!";
+    document.getElementById("clock-container").style.display = "none";
+  }
+}
+
+function updateNumber(id, newValue) {
+  const element = document.getElementById(id);
+  const oldValue = parseInt(element.innerText);
+  
+  if (oldValue !== newValue) {
+    // Add animation class
+    element.style.animation = 'none';
+    element.offsetHeight; // Trigger reflow
+    element.style.animation = null;
+    
+    // Update the number
+    element.innerText = newValue;
+  }
+}
+
+const countdownInterval = setInterval(updateCountdown, 1000);
+updateCountdown(); // Initial call
