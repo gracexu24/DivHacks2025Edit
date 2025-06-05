@@ -802,6 +802,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.accordion i {
+  font-size: 1.6rem;
+  image-rendering: pixelated;
+}
+
 .accordion:hover {
   background-color: rgba(138, 94, 153, 0.3);
   transform: translateY(-2px);
@@ -824,12 +829,14 @@ body {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease-out;
+  padding: 0 1rem;
 }
 
 .panel p {
   font-size: 2vw;
   line-height: 1;
   text-align: left;
+  color: rgb(49, 21, 65);
 }
 
 .faq {
@@ -1033,7 +1040,7 @@ body {
   gap: 0.2rem;
 }
 
-.number {
+#clock-container li span {
   font-family: 'Archivo Black', sans-serif;
   font-size: 4rem;
   font-weight: bold;
@@ -1044,7 +1051,7 @@ body {
   animation: numberChange 0.3s ease;
 }
 
-.label {
+#clock-container li .label {
   font-family: "Archivo Black", sans-serif;
   font-size: 2.5em;
   text-transform: uppercase;
