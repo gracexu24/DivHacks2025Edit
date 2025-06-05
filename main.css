@@ -1028,28 +1028,25 @@ body {
   gap: 0.2rem;
 }
 
-#clock-container li span {
+.number {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: bold;
   color: white;
   text-shadow: rgba(245, 121, 198, 0.8) 1px 0 10px;
   transition: all 0.3s ease;
   line-height: 1;
-}
-
-#clock-container li span:first-child {
   animation: numberChange 0.3s ease;
 }
 
 .label {
   font-family: "Archivo Black", sans-serif;
-  font-size: 0.7em;
+  font-size: 2.5em;
   text-transform: uppercase;
   color: white;
   text-shadow: rgba(245, 121, 198, 0.8) 1px 0 10px;
   z-index: 9;
-  margin-top: -0.3rem;
+  margin-top: -0.2rem;
 }
 
 @keyframes numberChange {
