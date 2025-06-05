@@ -134,10 +134,12 @@ h6 {
   display: inline-block;
   padding: 20px;
   box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .track-card:hover {
   box-shadow: 0 5px 20px rgb(84, 54, 149);
+  transform: translateY(-8px);
 }
 
 .track-content {
@@ -159,7 +161,7 @@ h6 {
 }
 
 .track-description h5 {
-  font-size: 15px;
+  font-size: 17px;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -759,6 +761,10 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+}
+
+#faq h2 {
+  margin-bottom: 40px; /* adjust as needed */
 }
 
 .wrapper {
