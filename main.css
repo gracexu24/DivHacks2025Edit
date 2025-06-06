@@ -423,7 +423,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 9999; /* ensure it stays on top */
-  backdrop-filter: blur(8px); /* optional: adds a frosted glass effect */
+  backdrop-filter: blur(30px); /* optional: adds a frosted glass effect */
   background-color: transparent;
   font-family: "Archivo Black", sans-serif;
   overflow: hidden;
@@ -431,7 +431,6 @@ a:hover {
   width: 100%;
   text-align: right;
   padding-bottom: 20px;
-  
 }
 
 .navbar-custom a {
