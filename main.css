@@ -546,7 +546,7 @@ a:hover {
 
 body {
   /*background: radial-gradient(circle at 30% 30%, #00f0ff, #7a00ff, #0a003d);*/
-  background-image: url("assets/background1.jpg");
+  background-image: url("assets/background2.jpg");
   background-size: cover; /* or contain, depending on your needs */
   background-repeat: no-repeat;
   background-position: center top; /* Adjust as necessary */
