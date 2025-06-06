@@ -592,7 +592,9 @@ body {
   margin-bottom: 3rem;
   text-align: center;
   width: 100%;
-  text-shadow: 2px 2px #311541;
+  text-shadow: 2px 2px 4px rgba(49, 21, 65, 0.8);
+  font-size: 4.5em;
+  letter-spacing: 4px;
 }
 
 .tracks-grid {
