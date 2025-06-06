@@ -153,6 +153,16 @@ h6 {
   flex-direction: column;
 }
 
+.track-content p {
+  font-size: 2em;
+  font-weight: 700;
+  color: rgb(188, 132, 220);
+  margin-bottom: 1rem;
+  font-family: "Archivo Black", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .track-description {
   flex: 1;
   margin-top: 15px;
@@ -161,13 +171,15 @@ h6 {
 }
 
 .track-description h5 {
-  font-size: 17px;
+  font-size: 19px;
   padding: 0;
   margin: 0;
-  text-align: center;
+  text-align: left;
   box-sizing: border-box;
-  font-family: "Archivo Black", sans-serif;
-  line-height: 1.4;
+  font-family: "Play", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #311541;
 }
 
 .track-img {
@@ -524,11 +536,12 @@ a:hover {
 
 #landing-subtitle {
   color: white;
+  text-shadow: none;
 }
 
 #home h1 {
   color: white;
-  text-shadow: rgba(62, 25, 108, 0.8) 2px 0 15px;
+  text-shadow: rgba(62, 25, 108, 0.8) 2px 0 25px;
   z-index: 9;
   margin: 0;
   font-size: 8vw;
@@ -536,12 +549,10 @@ a:hover {
 }
 
 #home h2 {
+  font-size: 2.5em;
   color: white;
-  text-shadow: rgba(245, 121, 198, 0.8) 1px 0 10px;
-  z-index: 9;
-  margin: 0;
-  margin-bottom: 3rem;
-  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: none;
 }
 
 body {
@@ -1052,35 +1063,21 @@ body {
 }
 
 #clock-container li span {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 3.5em;
   color: white;
-  text-shadow: rgba(245, 121, 198, 0.8) 1px 0 10px;
-  transition: all 0.3s ease;
-  line-height: 1;
-  animation: numberChange 0.3s ease;
+  font-family: "Archivo Black", sans-serif;
+  display: block;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 #clock-container li .label {
-  font-family: "Archivo Black", sans-serif;
   font-size: 2.5em;
-  text-transform: uppercase;
   color: white;
-  text-shadow: rgba(245, 121, 198, 0.8) 1px 0 10px;
-  z-index: 9;
-  margin-top: -0.2rem;
-}
-
-@keyframes numberChange {
-  0% {
-    opacity: 0.5;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  font-family: "Archivo Black", sans-serif;
+  display: block;
+  line-height: 1;
+  text-shadow: none;
 }
 
 /* phone view */
@@ -1188,4 +1185,13 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   background-color: transparent;
+}
+
+#about-text p {
+  font-size: 1.45em;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #311541;
+  margin-bottom: 1.5rem;
+  font-family: "Play", sans-serif;
 }
