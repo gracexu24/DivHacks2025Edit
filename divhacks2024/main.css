@@ -1,0 +1,1090 @@
+:root {
+  --nav-bg: #f07e72;
+  --nav-bg-op: rgba(83, 62, 145, 0.7);
+  --nav-bg-op2: rgba(83, 62, 145, 0.8);
+  --nav-item: #ffffff;
+  --btn-apply: #ffde59;
+  --btn-apply-dark: #f4c819;
+  --background-default: rgb(194, 213, 250);
+  --card-bg: rgba(174, 127, 206, 0.61);
+  --background-default-transparent: rgba(138, 94, 153, 0.7);
+  --title-txt: #eebc3f;
+  --desc-txt: rgb(238, 255, 209);
+  --desc-txt-op: rgba(238, 255, 209, 0.9);
+  --bronze: #cd7f32;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jersey 10", sans-serif;
+}
+
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* .card {
+    margin-top: 25%;
+    background-color: var(--card-bg);
+    outline: none;
+    padding: 30px;
+    color: var(--nav-txt);
+  } */
+
+.footer {
+  margin-top: 10%;
+  background-color: var(--nav-bg); /* Background color of the footer */
+  text-align: center; /* Center align text */
+  color: #ffde59;
+  padding: 20px 0; /* Padding for top and bottom */
+  position: relative; /* Position relative to contain inner elements */
+  bottom: 0; /* Stick footer to the bottom */
+  width: 100%; /* Full width */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for a lifted effect */
+}
+
+.footer-content {
+  max-width: 1200px; /* Max width for the content */
+  margin: 0 auto; /* Center the content */
+  padding: 0 20px; /* Padding for the content */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.footer-links {
+  margin-top: 10px; /* Space above the links */
+}
+
+.footer-text a {
+  /* color: var(--desc-txt);  */
+  color: var(--btn-apply);
+  margin: 0 15px; /* Margin between links */
+}
+
+.footer-links a:hover {
+  color: var(--btn-apply); /* Color on hover */
+}
+
+#about,
+#sponsor,
+#schedule,
+#judges {
+  display: flex;
+  justify-content: center; /* Centers the card horizontally */
+  align-items: center; /* Centers the card vertically */
+  box-sizing: border-box; /* Ensures padding is included in the height calculation */
+}
+
+/* Hover effect for component_div_left and component_div_right in the tracks section */
+.flip-card:hover {
+  box-shadow: 0 5px 20px rgb(84, 54, 149); /* Shadow effect on hover */
+}
+/* Optional: Add some padding and margin to ensure the hover effect looks good */
+.flip-card {
+  background-color: transparent;
+  width: 100%; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  perspective: 1000px; /* Add perspective */
+  display: inline-block; /* Allow cards to align side by side */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Preserve 3D space */
+}
+
+.flip-card-front,
+.flip-card-back {
+  padding: 0; /* Remove padding to bring text closer to edges */
+  margin: 0; /* Remove margin if any */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back side when facing front */
+}
+
+.flip-card-back p {
+  margin-bottom: 10px; /* Remove bottom margin */
+  padding-bottom: 0; /* Remove bottom padding */
+}
+.flip-card-back h5{
+  font-size: 19px;
+  padding-left: -10;  /* Remove left padding */
+  padding-right: -10; /* Remove right padding */
+  margin: 0;  /* Remove margin */
+  text-align: center; /* Optional: center-align text */
+  box-sizing: border-box;
+}
+
+.flip-card-front {
+  /*background-color: #fff; /* Front side background */
+  color: black; /* Front side text color */
+}
+
+.flip-card-back {
+  /*background-color: #f9f9f9; /* Back side background */
+  color: black; /* Back side text color */
+  transform: rotateY(180deg); /* Flip back side */
+}
+
+.flipped .flip-card-inner {
+  transform: rotateY(180deg); /* Rotate when flipped */
+}
+
+
+
+.track-img {
+  width: 50%;           /* Ensures the image takes up the full width of the container */
+  max-width: 200px;      /* Sets a maximum width for the images */
+  height: auto;          /* Maintains the aspect ratio */
+  max-height: 200px;     /* Sets a maximum height for the images */
+  object-fit: contain;   /* Ensures the image fits within the defined size without distortion */
+  display: block;
+  margin: 0 auto;        /* Centers the image */
+  padding-bottom: 5%;
+}
+
+.card {
+  text-align: center;
+  position: relative; /* Position relative to allow absolute positioning of card::before */
+  width: 65%; /* 50% width of the page */
+  padding: 0px; /* Padding inside the card (left right)*/
+  box-shadow: 0 4px 8px rgba(226, 94, 154, 0.1); /* Optional: Adds a subtle shadow for a lifted effect */
+  border-radius: 10px; /* rounded corners */
+  margin-top: 5%; /* Margin outside the card to create buffer space */
+  margin-bottom: 5%;
+  box-sizing: border-box; /*Ensures padding and margin are included in the width calculation*/
+  overflow: hidden; /* Ensures the pseudo-element does not overflow */
+  background-color: transparent; /* Make sure the card itself is transparent */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Background color for the pseudo-element */
+  opacity: 0.5; /* 50% opacity for the background */
+  border-radius: 10px; /* Same border radius as the .card */
+  z-index: -1; /* Places the pseudo-element behind the text */
+}
+
+@font-face {
+  font-family: Bungee;
+  src: url(fonts/Bungee/Bungee-Regular.ttf);
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: VT323;
+  src: url(fonts/Jersey_10/Jersey10-Regular.ttf);
+  font-weight: regular;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-brand-custom {
+    padding-left: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-brand-custom {
+    padding-left: 25vw;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color: rgb(36, 16, 48);
+  text-align: center;
+  letter-spacing: 12px;
+  font-size: 11vw;
+  font-family: "Jersey 10", sans-serif;
+}
+
+h2,
+h3,
+p {
+  color: rgb(49, 21, 65);
+  font-family: "Jersey 10", sans-serif;
+}
+
+#footer-text {
+  color: white;
+  /* font-family: "VT323", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif; */
+  font-family: "Jersey 10", sans-serif;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 4vw !important;
+  /* color: var(--title-txt) !important; */
+  letter-spacing: 4px;
+  font-stretch: ultra-expanded;
+  text-align: center;
+  text-shadow: 2px 2px var(--nav-bg);
+  margin-bottom: 5px;
+}
+
+#contact-icon {
+  width: 30px;
+  padding: 10px;
+}
+
+#about-text > h2 {
+  /* color: var(--desc-txt) !important; */
+  text-shadow: none;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2.25em;
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 2.3vw;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+a:link {
+  color: rgb(84, 54, 149);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(84, 54, 149) !important;
+  text-decoration: none;
+  text-shadow: 2px 2px var(--nav-bg);
+}
+
+.bronze-mark {
+  background-color: var(--bronze) !important;
+}
+
+.white-text {
+  color: var(--desc-txt) !important;
+  letter-spacing: 2px;
+}
+
+.no-js #loader {
+  display: none;
+}
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+.loader {
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 100001;
+  background-color: var(--nav-bg);
+  background-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.load-text {
+  color: white;
+  padding-bottom: 10px;
+  font-family: "Bungee", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.loader-animation {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+#logo {
+  background-color: var(--background-default);
+  border-radius: 25px;
+  padding: 5px;
+  margin: 0px 5px;
+}
+
+.link {
+  color: var(--desc-txt);
+  transition-property: color;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in-out;
+}
+
+.link:hover {
+  color: var(--background-default);
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* .navbar-custom {
+    font-family: 'Bungee', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--nav-bg);
+} */
+
+.navbar-custom {
+  font-family: "Bungee", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  overflow: hidden;
+  background-color: var(--nav-bg);
+  position: sticky;
+  width: 100%;
+  text-align: right; /* Align navbar links to the right */
+  padding-bottom: 20px;
+}
+.navbar-custom a {
+  /*display: inline-block; /* Display navbar links inline */
+  color: white;
+  padding: 14px 20px;
+}
+
+.section-bg {
+  width: 100%;
+  z-index: -1;
+}
+.background-container {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+#mlh-trust-badge {
+  max-width: 100px;
+  min-width: 60px;
+  position: fixed;
+  left: 50px;
+  top: 0;
+  width: 10%;
+  z-index: 10000;
+}
+
+/* Landing page CSS ============================ */
+#home {
+  position: relative;
+  width: 100%;
+  height: 115vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  /* background: linear-gradient(to top, rgb(217, 169, 245), transparent);  */
+  z-index: 1000;
+}
+
+#home img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* #home  */
+#moon {
+  /* position: absolute;
+    padding-bottom: 500px;
+    width: 500px; */
+  mix-blend-mode: lighten;
+}
+
+#home #mountains_front {
+  z-index: 10;
+}
+
+#mountains_foreground_right {
+  width: 50%; /* Image will scale to the width of its container */
+  height: auto; /* Height will adjust to maintain the aspect ratio */
+}
+
+#landing-title {
+  position: absolute;
+  padding-bottom: 250px;
+  white-space: nowrap;
+}
+
+#landing-subtitle {
+  color: white;
+}
+
+#home h1 {
+  color: white;
+  text-shadow: rgba(62, 25, 108, 0.8) 2px 0 15px;
+  z-index: 9;
+  margin: 0;
+}
+
+#home h2 {
+  color: white;
+  text-shadow: rgba(245, 121, 198, 0.8) 1px 0 10px;
+  z-index: 9;
+  margin: 0;
+}
+
+body {
+  background-image: url("assets/new_website_bg.png");
+  background-size: cover; /* or contain, depending on your needs */
+  background-repeat: no-repeat;
+  background-position: center top; /* Adjust as necessary */
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.spacer {
+  height: 750px; /* Adds 20px vertical space */
+}
+
+.background-container {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Tracks  ==================================================================================== */
+#tracks {
+  /* background: red; */
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
+
+.flip-card h4 {
+  font-size: 1.5rem; /* Adjust font size */
+  font-weight: bold; /* Make the text bold *//* Add margin for spacing */
+  text-align: center; /* Center the text */
+  transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+#nintendo-container {
+  display: flex; 
+  justify-content: center;
+  width: 100vw;
+}
+
+#nintendo {
+  height: 700px; 
+  margin-top: 20px; /* temp */
+  position: relative; 
+}
+
+/* #nintendo-overlay {
+  margin: 63px;
+  position: absolute; 
+  height: 244px;
+  width: 572px;
+  z-index: 10;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+.nintendo-bg-block {
+  height: 100%;
+  width: 20%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+} */
+
+#nintendo-overlay {
+  margin: 63px;
+  position: absolute;
+  height: 244px; /* Double the original height to fit two rows */
+  width: 572px;
+  z-index: 10;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap; /* Allows the items to wrap to the next line */
+}
+
+.nintendo-bg-block {
+  height: 50%; /* Half the height to fit two rows */
+  width: 33.33%; /* One-third width to fit three containers per row */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+.nintendo-bg-block:hover {
+  height: 97.6%;
+  border: 3px solid white; 
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.75); 
+  z-index: 100;
+  cursor: pointer; 
+}
+
+.sprite-container {
+  margin-top: 30px;
+  display: flex; 
+  justify-content:center; 
+  align-items: center;
+  height: 80%;
+  flex-direction: column;  
+}
+
+
+
+.sprite-text {
+  display: block;
+}
+.nintendo-sprite {
+  width: fit-content;
+  height: 135px ;
+  display: block;
+}
+
+.screen-education {
+  background: #C7FFBA;
+}
+
+.screen-health {
+  background: #8CE3FF;
+}
+
+.screen-media {
+  background: #B5AFFF;
+}
+
+.screen-environment {
+  background: #FFB2FF;
+}
+
+.screen-fashion {
+  background: #FFE28B;
+}
+
+
+#nintendo-bottom-overlay {
+  margin: 426px;
+  position: absolute; 
+  background: #E6EFF6;
+  height: 232px;
+  width: 348px;
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  align-items: center; 
+}
+
+
+#nintendo-bottom-overlay #pick-text {
+  margin: 0 auto; 
+  font-size: 80px;
+}
+
+#nintendo-bottom-overlay #pick-text span {
+  display: block;
+}
+
+#nintendo-bottom-overlay #desc-text {
+  text-align: center;
+  font-size: 25px;
+}
+
+#nintendo-detail-screen {
+  height: 100%; 
+  width: 100%;
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#back-btn {
+  height: 50px; 
+  position: absolute;
+  top: 10px;
+  right: 520px;
+}
+
+#back-btn:hover {
+  cursor: pointer;
+}
+
+#detail-container {
+  position: absolute;
+  display: flex; 
+}
+
+#detail-text {
+  font-size: 70px; 
+  margin-left: 40px; 
+}
+
+#detail-sprite {
+  height: 150px; 
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none; 
+}
+
+@media screen and (max-width: 768px) {
+  /* @todo: make responsive tracks design */
+  /* #tracks #nintendo {
+    height: 400px; 
+    background: blue;
+    padding: 0;
+  } */
+}
+
+
+/*FAQs CSS */
+#faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: auto;
+}
+
+.wrapper > p,
+.wrapper > h1 {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.wrapper > h1 {
+  letter-spacing: 3px;
+}
+
+.accordion {
+  background-color: white;
+  color: rgb(49, 21, 65);
+  font-family: "Jersey 10", sans-serif;
+  cursor: pointer;
+  font-size: 2.3vw;
+  width: 100%;
+  padding: 1.4rem;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+.accordion i {
+  font-size: 1.6rem;
+  image-rendering: pixelated;
+}
+
+.active,
+.accordion:hover {
+  background-color: rgb(221, 196, 246);
+}
+.panel {
+  size: 1em !important;
+  color: var(--title-txt) !important;
+  padding: 0 1rem 0 1rem;
+  background-color: rgb(238, 225, 250);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+  font-size: 2vw;
+  line-height: 1;
+  text-align: left;
+}
+
+.faq {
+  margin: 10px 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.faq.active {
+  border: none;
+}
+
+/* Only target the card inside the Judges section */
+/* #judges .card {
+  width: auto; 
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+} */
+
+.carousel_judges {
+  display: flex;
+  margin: 0 auto;
+  width: 100%; /* Match the card width */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.slide_judges {
+  width: 100%;
+  margin: 10px 5px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide_judges img {
+  width: 80%;  /* Image now takes up 100% of the available width */
+  height: 100%; /* Image will also take up the full height */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  display: block;
+  margin: 0 auto;
+}
+
+/* JUDGES CSS */
+/* #judges .card {
+  height: 700px; /* Increase the width of the card for judges */
+  /* Adjust height to fit the content 
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carousel_judges {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  height: 150%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.slide_judges{
+  width: 100%;
+  height: 150%;
+  /* height: 450px;  
+  margin: 20px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  /* display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.slide_judges img {
+  /* max-height: 150%;
+  max-width: 100%; Ensures the image width does not exceed the container's width 
+  height: auto;  Ensures the image height does not exceed the container's height 
+  object-fit: contain; /* Scales the image to fit within the container while maintaining its aspect ratio 
+  display: block; /* Removes any extra space below the image 
+} */
+
+
+/* TEAM CSS */
+#team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.component_div_left {
+  float: left;
+  width: 44.5%;
+  background-color: rgba(244, 222, 250);
+  border-radius: 10px;
+  margin-left: 3%;
+  margin-bottom: 3%;
+}
+
+.component_div_right {
+  float: right;
+  width: 44.5%;
+  background-color: rgba(244, 222, 250);
+  border-radius: 10px;
+  margin-right: 3%;
+  margin-bottom: 3%;
+}
+
+.carousel_executive,
+.carousel_tech,
+.carousel_sponsor,
+.carousel_pub,
+.carousel_log,
+.carousel_hx {
+  display: flex;
+  margin: 0 auto;
+  width: 245px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  width: 100%;
+  /* height: 200px; */
+  margin: 0 20px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 100%; /* Ensures the image width does not exceed the container's width */
+  max-height: 100%; /* Ensures the image height does not exceed the container's height */
+  object-fit: contain; /* Scales the image to fit within the container while maintaining its aspect ratio */
+  display: block; /* Removes any extra space below the image */
+}
+
+.carousel_style {
+  text-align: center;
+}
+
+.carousel_style img {
+  display: block;
+  margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+.carousel_txt{
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.apply-button:hover {
+  background-color: rgba(105, 61, 135, 0.61); /* Darker shade on hover */
+}
+
+.apply-button-container {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  margin-top: 60px; /* Add some margin to separate it from other elements */
+}
+
+.countdown-container {
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#countdown-title {
+  padding-top: 50px;
+}
+
+#clock-container {
+  font-family: "Jersey 10", sans-serif;
+}
+
+#clock-container li {
+  display: inline-block;
+  font-size: 2.5em;
+  align-items: center;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: rgba(245, 121, 198, 0.8) 1px 0 10px;
+  z-index: 9;
+  margin: 0;
+}
+
+#clock-container li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.apply-button {
+  letter-spacing: 3px;
+  padding: 10px 30px;
+  font-size: 3vw;
+  font-weight: bold;
+  font-family: "Jersey 10", sans-serif;
+  color: white;
+  background-color: rgba(174, 127, 206, 0.61);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  color: white !important; /* Ensures the text color stays white on hover */
+  background-color: #6c3683;
+
+}
+
+/* phone view */
+/* hide on phone team, sponsor, schedule */
+
+
+@media screen and (max-width: 600px)
+{
+  #team{
+    display: none;
+  }
+
+  #sponsor{
+    display: none;
+  }
+
+  #schedule{
+    display: none;
+  }
+
+  h2 {
+    font-size: 6vw !important;
+  }
+
+  h1 {
+    font-size: 10vw;
+  }
+
+  p {
+    font-size: 4.2vw;
+  }
+
+  .apply-button {
+    font-size: 5vw;
+  }
+
+  .accordion {
+    font-size: 4.2vw;
+  }
+
+  .panel p {
+    font-size: 3.7vw;
+  }
+
+  .card{
+    width: 85%;
+  }
+
+
+}
+
+/* phone view nav bar */
+
+
+@media screen and (max-width: 600px)
+{
+  #nav-about{
+    display: none;
+  }
+  #nav-sponsor{
+    display: none;
+  }
+  #nav-schedule{
+    display: none;
+  }
+  #nav-team{
+    display: none;
+  }
+  #nav-faq{
+    display: none;
+  }
+
+  #nav-home{
+    font-size: 3vw;
+  }
+  #nav-mailing{
+    font-size: 3vw;
+  }
+  #nav-apply{
+    font-size: 3vw;
+  }
+
+
+}
