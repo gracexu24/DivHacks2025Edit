@@ -41,6 +41,29 @@ h6 {
   color: #ffffff !important;
 }
 
+/* DIVHACKS 2024 button styling */
+.nav-link-custom[href="divhacks2024/index.html"] {
+  background-color: #311541 !important;
+  color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  margin-left: 10px;
+  margin-right: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-link-custom[href="divhacks2024/index.html"]:hover {
+  background-color: #543695 !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+  transform: translateY(-1px);
+}
+
+.nav-link-custom[href="divhacks2024/index.html"]::after {
+  display: none !important;
+}
+
 /* prevent global hover shadow for nav links w/ '!important' */
 .nav-link-custom:hover {
   text-shadow: none !important; /* Prevent global hover shadow */
@@ -85,9 +108,9 @@ h6 {
 
 .footer {
   margin-top: 10%;
-  background-color: var(--nav-bg); /* Background color of the footer */
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white to match other sections */
   text-align: center; /* Center align text */
-  color: #ffde59;
+  color: #311541; /* Dark purple to match page text */
   padding: 20px 0; /* Padding for top and bottom */
   position: relative; /* Position relative to contain inner elements */
   bottom: 0; /* Stick footer to the bottom */
@@ -108,12 +131,12 @@ h6 {
 
 .footer-text a {
   /* color: var(--desc-txt);  */
-  color: var(--btn-apply);
+  color: #311541; /* Dark purple to match page text */
   margin: 0 15px; /* Margin between links */
 }
 
 .footer-links a:hover {
-  color: var(--btn-apply); /* Color on hover */
+  color: #543695; /* Slightly lighter purple for hover */
 }
 
 #about,
@@ -264,9 +287,7 @@ p {
 }
 
 #footer-text {
-  color: white;
-  /* font-family: "VT323", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif; */
+  color: #311541; /* Dark purple to match page text */
   font-family: "Jersey 10", sans-serif;
   font-size: 30px;
 }
@@ -911,6 +932,7 @@ body {
 .wrapper {
   max-width: 90%;
   margin: auto;
+  padding-bottom: 2rem;
 }
 
 .wrapper > p,
@@ -983,7 +1005,7 @@ body {
 .faq {
   margin: 10px 0;
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-right-radius: 10px;;
 }
 .faq.active {
   border: none;
