@@ -105,8 +105,9 @@
         </button> -->
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
-          <a class="nav-link nav-link-custom" id = "nav-home" ref="#">HOME</a>
+          <a class="nav-link nav-link-custom" id = "nav-home" href="#">HOME</a>
           <a class="nav-link nav-link-custom" id = "nav-about" href="#about">ABOUT</a>
+          <a class="nav-link nav-link-custom" id = "nav-tracks" href="#tracks">TRACKS</a>
           <a class="nav-link nav-link-custom" id = "nav-team" href="team.html">TEAM</a>
           <!--<a class="nav-link nav-link-custom" id = "nav-sponsor" href="#sponsor">SPONSOR US</a>
           <a class="nav-link nav-link-custom" id = "nav-sponsor" href="#judges">JUDGES</a>
@@ -149,82 +150,21 @@
     /> -->
 
     <div id="landing-title">
-      <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
       <h1>
         <b>DIVHACKS 2025</b>
       </h1>
-      <!---->
       <h2 id="landing">OCTOBER 4-5TH</h2>
-      <!-- <div class="apply-button-container">
-        <a target="_blank" href="https://forms.gle/iT4nppXDMrDLqc8q7" class="apply-button">APPLY NOW</a>
-      </div> -->
-      
       <div class="countdown-container">
-        <!-- <h2 id="countdown-title">Countdown to DivHacks:</h2> -->
         <div id="clock-container">
-          <ul id="">
-            <li><span id="days"></span>days</li>
-            <li><span id="hours"></span>Hours</li>
-            <li><span id="minutes"></span>Minutes</li>
-            <li><span id="seconds"></span>Seconds</li>
+          <ul>
+            <li><span id="days"></span><span class="label">DAYS</span></li>
+            <li><span id="hours"></span><span class="label">HOURS</span></li>
+            <li><span id="minutes"></span><span class="label">MINUTES</span></li>
+            <li><span id="seconds"></span><span class="label">SECONDS</span></li>
           </ul>
         </div>
       </div>
     </div>
-
-
-    <script>(function () {
-      const second = 1000,
-            minute = second * 60,
-            hour = minute * 60,
-            day = hour * 24;
-
-      let today = new Date(),
-          dd = String(today.getDate()).padStart(2, "0"),
-          mm = String(today.getMonth() + 1).padStart(2, "0"),
-          yyyy = today.getFullYear(),
-          DivhacksDay = "10/04/2025";
-      
-      today = mm + "/" + dd + "/" + yyyy;
-      if (today > DivhacksDay) {
-        DivhacksDay = "10/04/" + (yyyy + 1);
-      }
-      
-      const countDown = new Date(DivhacksDay).getTime(),
-          x = setInterval(function() {    
-    
-            const now = new Date().getTime(),
-                  distance = countDown - now;
-    
-            document.getElementById("days").innerText = Math.floor(distance / (day)),
-              document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-              document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-              document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-    
-            //do something later when date is reached
-            if (distance < 0) {
-              document.getElementById("countdown-title").innerText = "The Hackathon Has Begun!";
-              document.getElementById("clock-container").style.display = "none";
-              /*document.getElementById("content").style.display = "block";*/
-              clearInterval(x);
-            }
-            //seconds
-          }, 1000)
-      }());</script>
-    
-    <!-- <div class="countdown-container">
-    <p id="countdown"></p>
-  </div> -->
 
   </div>
   <!-- =============================== About Divhacks ===============================-->
@@ -238,101 +178,67 @@
       <h2>
         <b>ABOUT DIVHACKS</b>
       </h2>
-      <p>
-        DivHacks, founded in 2017, is Columbia University's premier student-led
+        <p style="font-size: 1.6em; line-height: 1.5">
+        <span class="highlight">DivHacks</span>, founded in 2017, is Columbia University's premier student-led
         annual diversity hackathon. Over the past seven years, DivHacks has
         welcomed attendees from all over the tri-state area. We strive to create
         an empowering and inspirational space for students who are historically
         underrepresented in the tech industry. Our goal is an experience that
         not only reimagines what diversity should look like in the tech industry
         but gives students the tools to use technology to implement change.
-      </p>
+        </p>
     </div>
   </div>
 
   <!-- =============================== Tracks - BASIC =============================== -->
-
   <div class="row-section" id="tracks">
-  <div class="card" id="about-text">
     <h2><b>TRACKS</b></h2>
-
-    <div class="component_div_left">
-      <div class="track-card">
-        <div class="track-content">
-          <p>Productivity</p>
-          <!-- <div class="component">
-            <div class="carousel_executive carousel_style">
-              <div class="slide">
-                <img src="assets/square_sprites/edu.png" alt="Education Track" class="track-img" />
-              </div>
+    <div class="tracks-grid">
+      <div class="component_div_left">
+        <div class="track-card">
+          <div class="track-content">
+            <p>Productivity</p>
+            <div class="track-description">
+              <h5>Build tools that help people work smarter, live healthier, and learn better in school, the workplace, and everyday life. Empower people to do more in less time.</h5>
             </div>
-          </div> -->
-          <div class="track-description">
-            <h5>Build tools that help people work smarter, live healthier, and learn better– whether in school, the workplace, or everyday life. Empower people to do more in less time.</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="component_div_right">
+        <div class="track-card">
+          <div class="track-content">
+            <p>Sustainability</p>
+            <div class="track-description">
+              <h5>Develop solutions for a greener future, from fighting climate change to improving public health. Think global impact, local action, and tech that drives real social good.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component_div_left">
+        <div class="track-card">
+          <div class="track-content">
+            <p>Entertainment</p>
+            <div class="track-description">
+              <h5>Create the next generation of fun—whether it's games, social platforms, or immersive experiences. Redefine how people play, connect, and express themselves.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component_div_right">
+        <div class="track-card">
+          <div class="track-content">
+            <p>Emerging Tech</p>
+            <div class="track-description">
+              <h5>Experiment with cutting-edge technology like AI/ML, autonomous systems, spatial computing, XR (VR/AR). Build the unexpected and shape what's next.</h5>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="component_div_right">
-      <div class="track-card">
-        <div class="track-content">
-          <p>Sustainability</p>
-          <!-- <div class="component">
-            <div class="carousel_executive carousel_style">
-              <div class="slide">
-                <img src="assets/square_sprites/envi.png" alt="Environment Track" class="track-img" />
-              </div>
-            </div>
-          </div> -->
-          <div class="track-description">
-            <h5>Develop solutions for a greener future, from fighting climate change to improving public health. Think global impact, local action, and tech that drives real social good.</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="component_div_left">
-      <div class="track-card">
-        <div class="track-content">
-          <p>Entertainment</p>
-          <!-- <div class="component">
-            <div class="carousel_executive carousel_style">
-              <div class="slide">
-                <img src="assets/square_sprites/health.png" alt="Health Track" class="track-img" />
-              </div>
-            </div>
-          </div> -->
-          <div class="track-description">
-            <h5>Create the next generation of fun—whether it's games, social platforms, or immersive experiences. Redefine how people play, connect, and express themselves.</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="component_div_right">
-      <div class="track-card">
-        <div class="track-content">
-          <p>Emerging Technology</p>
-          <!-- <div class="component">
-            <div class="carousel_executive carousel_style">
-              <div class="slide">
-                <img src="assets/square_sprites/fashion.png" alt="Fashion Track" class="track-img" />
-              </div>
-            </div>
-          </div> -->
-          <div class="track-description">
-            <h5>Experiment with cutting-edge technology like AI/ML, autonomous systems, spatial computing, XR (VR/AR). Build the unexpected and shape what's next. </h5>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  
-    <!-- Repeat for other tracks: Media, Fashion, Civic, Health -->
-
   </div>
-</div>
 
   <!-- <div class="row-section" id="tracks">
     <div class="card" id="about-text">
