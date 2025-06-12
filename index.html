@@ -683,7 +683,9 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
         </button>
         <div class="panel">
           <p>
-            No, feel free to come to attend workshops, hang out with other hackers, and listen to speakers.
+            Project submissions are not required, but highly encouraged. 
+            It's a great opportunity to leave the hackathon with a complete 
+            project and get feedback.
         </div>
       </div>
 
@@ -1228,6 +1230,33 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
     }
 
     // ================================================================================================
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const aboutCard = document.querySelector('.about-card-image');
+      const aboutSection = document.getElementById('about');
+
+      function handleScroll() {
+        const aboutRect = aboutSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const aboutInView = (aboutRect.top < windowHeight * 0.6) && (aboutRect.bottom > windowHeight * 0.6);
+        const aboutOutOfView = aboutRect.bottom < windowHeight * 0.8;
+
+        if (aboutInView) {
+          aboutCard.classList.add('slide-in');
+          aboutCard.classList.remove('slide-out');
+        } else if (aboutOutOfView) {
+          aboutCard.classList.remove('slide-in');
+          aboutCard.classList.add('slide-out');
+        } else {
+          aboutCard.classList.remove('slide-in', 'slide-out');
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      handleScroll(); // Initial check
+    });
   </script>
 </body>
 </html>
