@@ -171,7 +171,6 @@ h6 {
 .track-content p {
   font-size: 2em;
   font-weight: 700;
-  color: rgb(221, 221, 221);
   margin-bottom: 1rem;
   font-family: "Archivo Black", sans-serif;
   text-transform: uppercase;
@@ -594,6 +593,7 @@ body {
 #tracks h2 {
   color: #ffffff;
   margin-bottom: 3rem;
+  margin-top: 80px;
   text-align: center;
   width: 100%;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
@@ -898,6 +898,7 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  margin-top: 50px;
 }
 
 #faq h2 {
@@ -906,6 +907,9 @@ body {
   font-size: 2.5em !important;
   white-space: nowrap !important;
   text-transform: uppercase !important;
+  text-align: center !important;
+  display: block !important;
+  visibility: visible !important;
 }
 
 .wrapper {
@@ -931,7 +935,7 @@ body {
   cursor: pointer;
   font-size: 2vw;
   width: 100%;
-  padding: 1.4rem;
+  padding: 1rem;
   border: none;
   outline: none;
   display: flex;
@@ -945,7 +949,7 @@ body {
 }
 
 .accordion i {
-  font-size: 1.2rem;
+  font-size: 1rem;
   image-rendering: pixelated;
 }
 
@@ -971,14 +975,16 @@ body {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease-out;
-  padding: 0 1rem;
+  padding: 5px !important;
 }
 
 .panel p {
-  font-size: 2vw;
+  font-size: 1.2rem !important;
   line-height: 1;
-  text-align: left;
-  color: rgb(249, 249, 249);
+  width: 100% !important;
+  text-align: left !important;
+  padding: 10px !important;
+  margin: 5px !important;
 }
 
 .faq {
@@ -1278,16 +1284,16 @@ body {
 
 #about {
   display: flex;
-  justify-content: left;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   box-sizing: border-box;
-  /* Add negative margin to move it up */
-  margin-top: -150px; 
-  padding-top: 50px; /* Add some padding to maintain spacing */
+  position: relative;
+  padding: 0 5%;
+  margin-top: -100px; /* Add negative margin to reduce space */
 }
 
 #about-text {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 #about-text h2 {
@@ -1295,9 +1301,9 @@ body {
 }
 
 #about-text p {
-  margin-top: 0; /* Remove top margin since title is gone */
-  font-size: 1em;
+  font-size: 1.5em;
   margin-left: 11%;
+  margin-top: 0px;
   font-family: 'Play', sans-serif;
   line-height: 1.5;
   color: #ffffff;
@@ -1305,24 +1311,32 @@ body {
   text-align: center;
 }
 
+.about-card-image {
+  width: 40%;
+  height: auto;
+  margin-top: 0px;
+  align-self: flex-start;
+  margin-top: 60px;
+}
+
 .stats-section {
   width: 50%;
-  margin-top: -50px; /* Move stats section up more */
   padding: 20px 30px;
   background: transparent;
   border-radius: 10px;
-  text-align: left;
-  margin-left: 5%;
+  text-align: center;
+  margin: 0 auto; /* Center the section */
   box-sizing: border-box;
 }
 
 .stats-section h2 {
-  font-size: 1.5em !important;
-  margin-bottom: 30px !important;
-  color: #ffffff !important;
-  text-align: center !important;
-  white-space: nowrap !important;
-  text-transform: uppercase !important;
+  font-size: 1.5em;
+  margin-top: 50px; /* Reduced from 150px */
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .stats-grid {
@@ -1331,6 +1345,10 @@ body {
   gap: 15px;
   margin-top: 20px;
   width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .stat-item {
