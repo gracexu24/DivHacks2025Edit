@@ -464,13 +464,13 @@ a:hover {
   width: 100%;
   text-align: right;
   padding-bottom: 20px;
+  padding-top: 30px; /* Add padding to account for top caution tape */
 }
 
 .navbar-custom a {
   color: rgb(188, 132, 220);
   padding: 14px 20px;
 }
-
 
 .section-bg {
   width: 100%;
@@ -1328,4 +1328,175 @@ body {
   color: #311541;
   margin-bottom: 1.5rem;
   font-family: "Play", sans-serif;
+}
+
+/* Construction Banner Animation */
+@keyframes moveStripesTop {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 80px 0;
+  }
+}
+
+@keyframes moveStripesRight {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 80px;
+  }
+}
+
+@keyframes moveStripesBottom {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -80px 0;
+  }
+}
+
+@keyframes moveStripesLeft {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -80px;
+  }
+}
+
+/* Construction Banner Styles */
+.construction-banner {
+  position: fixed;
+  background-size: 80px 80px;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.construction-banner.top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffd700,
+    #ffd700 10px,
+    #000 10px,
+    #000 20px
+  );
+  animation: moveStripesTop 2s linear infinite;
+}
+
+.construction-banner.right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffd700,
+    #ffd700 10px,
+    #000 10px,
+    #000 20px
+  );
+  animation: moveStripesRight 2s linear infinite;
+}
+
+.construction-banner.bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffd700,
+    #ffd700 10px,
+    #000 10px,
+    #000 20px
+  );
+  animation: moveStripesBottom 2s linear infinite;
+}
+
+.construction-banner.left {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffd700,
+    #ffd700 10px,
+    #000 10px,
+    #000 20px
+  );
+  animation: moveStripesLeft 2s linear infinite;
+}
+
+.construction-corner {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: #ffd700;
+  z-index: 100000; /* Increased z-index */
+  pointer-events: none;
+}
+
+.construction-corner.top-left {
+  top: 0;
+  left: 0;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.construction-corner.top-right {
+  top: 0;
+  right: 0;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.construction-corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: 2px solid #000;
+  border-top: 2px solid #000;
+}
+
+.construction-corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-left: 2px solid #000;
+  border-top: 2px solid #000;
+}
+
+.corner-tape {
+  position: fixed;
+  top: 150px;
+  left: 0px;
+  background: #ffd700;
+  color: #000;
+  padding: 8px 15px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  transform: rotate(-20deg);
+  transform-origin: left top;
+  z-index: 100000;
+  pointer-events: none;
+  white-space: nowrap;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjust navbar to work with caution tape */
+.navbar-custom {
+  padding-top: 30px; /* Add padding to account for top caution tape */
+}
+
+.nav-container-custom {
+  padding-left: 30px; /* Add padding to account for left caution tape */
+  padding-right: 30px; /* Add padding to account for right caution tape */
 }
