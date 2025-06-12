@@ -3,8 +3,8 @@
   --nav-bg-op: rgba(83, 62, 145, 0.7);
   --nav-bg-op2: rgba(83, 62, 145, 0.8);
   --nav-item: #ffffff;
-  --btn-apply: #ffde59;
-  --btn-apply-dark: #f4c819;
+  --btn-apply: #ffffff;
+  --btn-apply-dark: #b8b8b8;
   --background-default: rgb(194, 213, 250);
   --card-bg: rgba(174, 127, 206, 0.61);
   --background-default-transparent: rgba(138, 94, 153, 0.7);
@@ -24,14 +24,6 @@ h6 {
   font-family: "Archivo Black", sans-serif;
 }
 
-/* NEW emphasis COLOR */
-/*
-.highlight {
-  color: white;
-  font-weight: bold;
-}
-*/
-
 /* NEW ANIMATED UNDERLINE */
 .nav-link-custom {
   position: relative;
@@ -43,7 +35,7 @@ h6 {
 
 /* DIVHACKS 2024 button styling */
 .nav-link-custom[href="divhacks2024/index.html"] {
-  background-color: #311541 !important;
+  background-color: #343434 !important;
   color: #ffffff !important;
   padding: 8px 16px !important;
   border-radius: 6px !important;
@@ -54,7 +46,7 @@ h6 {
 }
 
 .nav-link-custom[href="divhacks2024/index.html"]:hover {
-  background-color: #543695 !important;
+  background-color: #878787 !important;
   color: #ffffff !important;
   text-shadow: none !important;
   transform: translateY(-1px);
@@ -67,7 +59,7 @@ h6 {
 /* prevent global hover shadow for nav links w/ '!important' */
 .nav-link-custom:hover {
   text-shadow: none !important; /* Prevent global hover shadow */
-  color: #cfbdff !important; /* slightly darker version of base color */
+  color: #878787 !important; /* slightly darker version of base color */
 }
 
 .nav-link-custom::after {
@@ -77,7 +69,7 @@ h6 {
   height: 4px;
   bottom: 4px;
   left: 50%;
-  background-color: #cfbdff;
+  background-color: #878787;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -202,7 +194,7 @@ h6 {
   font-family: "Play", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #311541;
+  color: #ffffff;
 }
 
 .track-img {
@@ -221,7 +213,7 @@ h6 {
   position: relative;
   width: 65%;
   padding: 0px;
-  box-shadow: 0 4px 8px rgba(226, 94, 154, 0.1);
+  box-shadow: none;
   border-radius: 10px;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -231,16 +223,7 @@ h6 {
 }
 
 .card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  opacity: 0.5;
-  border-radius: 10px;
-  z-index: -1;
+  display: none;
 }
 
 @font-face {
@@ -272,7 +255,7 @@ html {
 }
 
 h1 {
-  color: rgb(36, 16, 48);
+  color: rgb(255, 255, 255);
   text-align: left;
   letter-spacing: 12px;
   font-size: 8vw;
@@ -282,7 +265,7 @@ h1 {
 h2,
 h3,
 p {
-  color: rgb(49, 21, 65);
+  color: rgb(255, 255, 255);
   font-family: "Archivo Black", sans-serif;
 }
 
@@ -543,6 +526,7 @@ a:hover {
 }
 
 #landing-title {
+  margin-top: -60px;
   position: absolute;
   top: 15%;
   left: 50%;
@@ -562,7 +546,7 @@ a:hover {
 
 #home h1 {
   color: white;
-  text-shadow: rgba(62, 25, 108, 0.8) 2px 0 25px;
+  text-shadow: rgba(255, 255, 255, 0.8) 2px 0 25px;
   z-index: 9;
   margin: 0;
   font-size: 8vw;
@@ -578,7 +562,8 @@ a:hover {
 
 body {
   /*background: radial-gradient(circle at 30% 30%, #00f0ff, #7a00ff, #0a003d);*/
-  background-image: url("assets/background2.jpg");
+  /* background-image: url("assets/temp.png"); */
+  background: #000000;
   background-size: cover; /* or contain, depending on your needs */
   background-repeat: no-repeat;
   background-position: center top; /* Adjust as necessary */
@@ -613,7 +598,7 @@ body {
   margin-bottom: 3rem;
   text-align: center;
   width: 100%;
-  text-shadow: 2px 2px 4px rgba(49, 21, 65, 0.8);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
   font-size: 4.5em;
   letter-spacing: 4px;
 }
@@ -663,7 +648,7 @@ body {
 .track-content p {
   font-size: 2em;
   font-weight: 700;
-  color: #311541;
+  color: #ffffff;
   margin-bottom: 1rem;
   font-family: "Archivo Black", sans-serif;
   text-transform: uppercase;
@@ -676,9 +661,11 @@ body {
   margin-top: 15px;
   padding: 10px;
   overflow-y: auto;
+  color: #ffffff;
 }
 
 .track-description h5 {
+  color: #ffffff;
   font-size: 19px;
   padding: 0;
   margin: 0;
@@ -687,7 +674,6 @@ body {
   font-family: "Play", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #311541;
 }
 
 .track-img {
@@ -706,7 +692,7 @@ body {
   position: relative;
   width: 65%;
   padding: 0px;
-  box-shadow: 0 4px 8px rgba(226, 94, 154, 0.1);
+  box-shadow: none;
   border-radius: 10px;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -716,16 +702,7 @@ body {
 }
 
 .card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  opacity: 0.5;
-  border-radius: 10px;
-  z-index: -1;
+  display: none;
 }
 
 #tracks h2 {
@@ -926,7 +903,11 @@ body {
 }
 
 #faq h2 {
-  margin-bottom: 40px; /* adjust as needed */
+  color: #ffffff !important;
+  margin-bottom: 40px !important;
+  font-size: 2.5em !important;
+  white-space: nowrap !important;
+  text-transform: uppercase !important;
 }
 
 .wrapper {
@@ -946,11 +927,11 @@ body {
 }
 
 .accordion {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgb(49, 21, 65);
-  font-family: "Archivo Black", sans-serif;
+  background-color: rgba(107, 107, 107, 0.56);
+  color: rgb(255, 255, 255);
+  font-family: "Play", sans-serif;
   cursor: pointer;
-  font-size: 2.3vw;
+  font-size: 2vw;
   width: 100%;
   padding: 1.4rem;
   border: none;
@@ -966,18 +947,18 @@ body {
 }
 
 .accordion i {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   image-rendering: pixelated;
 }
 
 .accordion:hover {
-  background-color: rgba(138, 94, 153, 0.3);
+  background-color: rgba(218, 218, 218, 0.56);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(138, 94, 153, 0.2);
+  box-shadow: 0 4px 15px rgba(159, 159, 159, 0.2);
 }
 
 .active {
-  background-color: rgba(138, 94, 153, 0.4);
+  background-color: rgba(218, 218, 218, 0.56);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -999,7 +980,7 @@ body {
   font-size: 2vw;
   line-height: 1;
   text-align: left;
-  color: rgb(49, 21, 65);
+  color: rgb(249, 249, 249);
 }
 
 .faq {
@@ -1142,7 +1123,7 @@ body {
 }
   
 .apply-button:hover {
-  background-color: rgba(105, 61, 135, 0.61); /* Darker shade on hover */
+  background-color: var(--btn-apply-dark); /* Darker shade on hover */
 }
 
 .apply-button-container {
@@ -1303,7 +1284,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   /* Add negative margin to move it up */
-  margin-top: -100px; 
+  margin-top: -150px; 
   padding-top: 50px; /* Add some padding to maintain spacing */
 }
 
@@ -1325,7 +1306,7 @@ body {
   font-size: 1.45em;
   line-height: 1.6;
   font-weight: 400;
-  color: #311541;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   font-family: "Play", sans-serif;
 }
