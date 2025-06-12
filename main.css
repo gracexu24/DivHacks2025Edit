@@ -1,17 +1,17 @@
 :root {
-  --nav-bg: #f07e72;
-  --nav-bg-op: rgba(83, 62, 145, 0.7);
-  --nav-bg-op2: rgba(83, 62, 145, 0.8);
+  --nav-bg: #bababa;
+  --nav-bg-op: rgba(144, 144, 144, 0.7);
+  --nav-bg-op2: rgba(113, 113, 113, 0.8);
   --nav-item: #ffffff;
   --btn-apply: #ffffff;
   --btn-apply-dark: #b8b8b8;
   --background-default: rgb(194, 213, 250);
-  --card-bg: rgba(174, 127, 206, 0.61);
-  --background-default-transparent: rgba(138, 94, 153, 0.7);
-  --title-txt: #eebc3f;
-  --desc-txt: rgb(238, 255, 209);
-  --desc-txt-op: rgba(238, 255, 209, 0.9);
-  --bronze: #cd7f32;
+  --card-bg: rgba(146, 146, 146, 0.61);
+  --background-default-transparent: rgba(160, 160, 160, 0.7);
+  --title-txt: #848484;
+  --desc-txt: rgb(255, 255, 255);
+  --desc-txt-op: rgba(255, 255, 255, 0.9);
+  --bronze: #ffffff;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
@@ -123,12 +123,12 @@ h6 {
 
 .footer-text a {
   /* color: var(--desc-txt);  */
-  color: #311541; /* Dark purple to match page text */
+  color: #515151; /* Dark purple to match page text */
   margin: 0 15px; /* Margin between links */
 }
 
 .footer-links a:hover {
-  color: #543695; /* Slightly lighter purple for hover */
+  color: #767676; /* Slightly lighter purple for hover */
 }
 
 #about,
@@ -171,7 +171,7 @@ h6 {
 .track-content p {
   font-size: 2em;
   font-weight: 700;
-  color: rgb(188, 132, 220);
+  color: rgb(221, 221, 221);
   margin-bottom: 1rem;
   font-family: "Archivo Black", sans-serif;
   text-transform: uppercase;
@@ -524,7 +524,7 @@ a:hover {
 }
 
 #landing-title {
-  margin-top: -60px;
+  margin-top: -35px;
   position: absolute;
   top: 15%;
   left: 50%;
@@ -1278,7 +1278,7 @@ body {
 
 #about {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   box-sizing: border-box;
   /* Add negative margin to move it up */
@@ -1287,26 +1287,95 @@ body {
 }
 
 #about-text {
-  text-align: center;
-  position: relative;
-  width: 65%;
-  padding: 0px;
-  box-shadow: 0 4px 8px rgba(226, 94, 154, 0.1);
-  border-radius: 10px;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  box-sizing: border-box;
-  overflow: hidden;
-  background-color: transparent;
+  margin-bottom: 30px;
+}
+
+#about-text h2 {
+  display: none; /* Hide the About DivHacks title */
 }
 
 #about-text p {
-  font-size: 1.45em;
-  line-height: 1.6;
-  font-weight: 400;
+  margin-top: 0; /* Remove top margin since title is gone */
+  font-size: 1em;
+  margin-left: 11%;
+  font-family: 'Play', sans-serif;
+  line-height: 1.5;
   color: #ffffff;
-  margin-bottom: 1.5rem;
-  font-family: "Play", sans-serif;
+  width: 70%;
+  text-align: center;
+}
+
+.stats-section {
+  width: 50%;
+  margin-top: -50px; /* Move stats section up more */
+  padding: 20px 30px;
+  background: transparent;
+  border-radius: 10px;
+  text-align: left;
+  margin-left: 5%;
+  box-sizing: border-box;
+}
+
+.stats-section h2 {
+  font-size: 1.5em !important;
+  margin-bottom: 30px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  text-transform: uppercase !important;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #bababa;
+  font-family: 'Play', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Construction Banner Animation */
@@ -1453,9 +1522,9 @@ body {
 
 .corner-tape {
   position: fixed;
-  top: 88px;
-  left: 15.2%;
-  transform: translateX(-50%) rotate(-25deg);
+  top: 96px;
+  left: 0px;  /* Changed from percentage to fixed pixels */
+  transform: rotate(-25deg);  /* Removed translateX since we're using fixed positioning */
   background: #ffd700;
   color: #000;
   padding: 8px 15px;
@@ -1470,21 +1539,12 @@ body {
   animation: swingSign 3s ease-in-out infinite;
 }
 
-@keyframes swingLanyard {
-  0%, 100% {
-    transform: translateX(-50%) rotate(-5deg);
-  }
-  50% {
-    transform: translateX(-50%) rotate(5deg);
-  }
-}
-
 @keyframes swingSign {
   0%, 100% {
-    transform: translateX(-50%) rotate(-25deg);
+    transform: rotate(-25deg);
   }
   50% {
-    transform: translateX(-50%) rotate(-15deg);
+    transform: rotate(-15deg);
   }
 }
 
