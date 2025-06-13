@@ -72,28 +72,40 @@
       gtag("config", "G-QTF9R0G9CL");
     </script>
   </head>
+  <body>
+    <!-- Under Construction Banner -->
+    <div class="construction-banner top"></div>
+    <div class="construction-banner right"></div>
+    <div class="construction-banner bottom"></div>
+    <div class="construction-banner left"></div>
+    <div class="construction-corner top-left"></div>
+    <div class="construction-corner top-right"></div>
+    <div class="construction-corner bottom-left"></div>
+    <div class="construction-corner bottom-right"></div>
+    <div class="lanyard"></div>
+    <div class="corner-tape">WEBSITE STILL UNDER CONSTRUCTION</div>
 
-  <!-- MLH Trust Badge  (commented out for now 3/28/25, need to be updated)
-  <a
-    id="mlh-trust-badge"
-    style="
-      display: block;
-      max-width: 100px;
-      min-width: 60px;
-      position: fixed;
-      right: 50px;
-      top: 0;
-      width: 10%;
-      z-index: 10000;
-    "
-    href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
-    target="_blank"
+    <!-- MLH Trust Badge  (commented out for now 3/28/25, need to be updated)
+    <a
+      id="mlh-trust-badge"
+      style="
+        display: block;
+        max-width: 100px;
+        min-width: 60px;
+        position: fixed;
+        right: 50px;
+        top: 0;
+        width: 10%;
+        z-index: 10000;
+      "
+      href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
+      target="_blank"
     ><img
       src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg"
       alt="Major League Hacking 2024 Hackathon Season"
       style="width: 100%"
   /></a>
--->
+  -->
   <nav class="navbar navbar-expand-lg sticky-top navbar-dark navbar-custom" id = "myTopnav">
     <div class="container-fluid nav-container-custom">
       <a class="navbar-brand navbar-brand-custom" href="#">
@@ -157,10 +169,10 @@
       <div class="countdown-container">
         <div id="clock-container">
           <ul>
-            <li><span id="days"></span><span class="label">DAYS</span></li>
-            <li><span id="hours"></span><span class="label">HOURS</span></li>
-            <li><span id="minutes"></span><span class="label">MINUTES</span></li>
-            <li><span id="seconds"></span><span class="label">SECONDS</span></li>
+            <li><span id="days"></span><span class="label">days</span></li>
+            <li><span id="hours"></span><span class="label">hours</span></li>
+            <li><span id="minutes"></span><span class="label">minutes</span></li>
+            <li><span id="seconds"></span><span class="label">seconds</span></li>
           </ul>
         </div>
       </div>
@@ -170,15 +182,11 @@
   <!-- =============================== About Divhacks ===============================-->
 
   <div class="row-section" id="about">
-    <!-- <img src="assets/blank_bg.png" class="background-container" /> -->
-  </div>
-
-  <div class="row-section" id="about">
     <div class="card" id="about-text">
       <h2>
         <b>ABOUT DIVHACKS</b>
       </h2>
-        <p style="font-size: 1.6em; line-height: 1.5">
+      <p>
         <span class="highlight">DivHacks</span>, founded in 2017, is Columbia University's premier student-led
         annual diversity hackathon. Over the past seven years, DivHacks has
         welcomed attendees from all over the tri-state area. We strive to create
@@ -186,7 +194,42 @@
         underrepresented in the tech industry. Our goal is an experience that
         not only reimagines what diversity should look like in the tech industry
         but gives students the tools to use technology to implement change.
-        </p>
+      </p>
+    </div>
+    <img src="assets/aboutcard.png" alt="About Card" class="about-card-image">
+  </div>
+
+  <div class="row-section" id="stats">
+    <div class="stats-section">
+      <h2>
+        <b>STATS FROM 2024</b>
+      </h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">750+</div>
+          <div class="stat-label">Applications</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">295</div>
+          <div class="stat-label">Hackers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">14</div>
+          <div class="stat-label">Countries Represented</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">54</div>
+          <div class="stat-label">Institutions</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">48.4%</div>
+          <div class="stat-label">Female/Non-binary</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">58.6%</div>
+          <div class="stat-label">Beginner Hackers</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -640,7 +683,9 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
         </button>
         <div class="panel">
           <p>
-            No, feel free to come to attend workshops, hang out with other hackers, and listen to speakers.
+            Project submissions are not required, but highly encouraged. 
+            It's a great opportunity to leave the hackathon with a complete 
+            project and get feedback.
         </div>
       </div>
 
@@ -1186,4 +1231,32 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
 
     // ================================================================================================
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const aboutCard = document.querySelector('.about-card-image');
+      const aboutSection = document.getElementById('about');
+
+      function handleScroll() {
+        const aboutRect = aboutSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const aboutInView = (aboutRect.top < windowHeight * 0.6) && (aboutRect.bottom > windowHeight * 0.6);
+        const aboutOutOfView = aboutRect.bottom < windowHeight * 0.8;
+
+        if (aboutInView) {
+          aboutCard.classList.add('slide-in');
+          aboutCard.classList.remove('slide-out');
+        } else if (aboutOutOfView) {
+          aboutCard.classList.remove('slide-in');
+          aboutCard.classList.add('slide-out');
+        } else {
+          aboutCard.classList.remove('slide-in', 'slide-out');
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      handleScroll(); // Initial check
+    });
+  </script>
+</body>
 </html>
