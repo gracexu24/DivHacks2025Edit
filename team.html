@@ -14,198 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
-    <style>
-      .team-hero {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 4rem 0 2rem 0;
-        flex-direction: column;
-        width: 100%;
-      }
-      .team-hero-content {
-        max-width: 700px;
-        width: 100%;
-        background: rgba(255,255,255,0.5);
-        border-radius: 10px;
-        padding: 2.5rem 3rem;
-        box-shadow: 0 4px 8px rgba(226, 94, 154, 0.1);
-        margin: 0 auto;
-        text-align: center;
-        position: relative;
-        box-sizing: border-box;
-        overflow: hidden;
-      }
-      .team-hero-content::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        opacity: 0.5;
-        border-radius: 10px;
-        z-index: -1;
-      }
-      .team-hero-content h2 {
-        font-size: 4vw !important;
-        margin-bottom: 1rem;
-        color: #000 !important;
-        font-family: "Archivo Black", sans-serif;
-        letter-spacing: 4px;
-        font-stretch: ultra-expanded;
-        text-align: center;
-        text-shadow: none;
-      }
-      .team-hero-content p {
-        font-size: 1.45em;
-        line-height: 1.6;
-        font-weight: 400;
-        color: #000;
-        margin-bottom: 1.5rem;
-        font-family: "Play", sans-serif;
-        text-align: left;
-      }
-      .team-hero-content .learn-more-btn {
-        background: #ffffff;
-        color: #311541;
-        border: none;
-        border-radius: 50%;
-        padding: 1rem;
-        font-size: 1.5rem;
-        font-family: 'Archivo Black', sans-serif;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 0 auto;
-      }
-      .team-hero-content .learn-more-btn:hover {
-        background: #f0f0f0;
-        transform: translateY(3px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        color: #311541;
-      }
-      .team-section {
-        margin: 3rem 0 2rem 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-      }
-      .team-section .card {
-        text-align: center;
-        position: relative;
-        width: 65%;
-        padding: 3rem 3rem 3rem 3rem;
-        box-shadow: 0 4px 8px rgba(226, 94, 154, 0.1);
-        border-radius: 10px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        box-sizing: border-box;
-        overflow: hidden;
-        background-color: transparent;
-      }
-      .team-section .card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        opacity: 0.5;
-        border-radius: 10px;
-        z-index: -1;
-      }
-      .team-section h2 {
-        font-size: 4vw !important;
-        color: #000 !important;
-        letter-spacing: 4px;
-        font-stretch: ultra-expanded;
-        text-align: center;
-        text-shadow: none;
-        margin-bottom: 40px;
-        font-family: "Archivo Black", sans-serif;
-      }
-      .team-section p {
-        color: #000;
-        font-size: 1.45em;
-        line-height: 1.6;
-        font-weight: 400;
-        margin-bottom: 2.5rem;
-        font-family: "Play", sans-serif;
-        text-align: center;
-      }
-      .team-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-        margin-bottom: 3rem;
-      }
-      .team-card {
-        width: 240px;
-        background: rgba(210, 208, 211, 0.9);
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(84,54,149,0.10), 0 1px 3px rgba(84,54,149,0.07);
-        padding: 2rem 1.5rem 1.5rem 1.5rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: box-shadow 0.2s, transform 0.2s;
-      }
-      .team-card:hover {
-        box-shadow: 0 8px 24px rgba(84,54,149,0.13), 0 2px 8px rgba(84,54,149,0.09);
-        transform: translateY(-3px) scale(1.015);
-      }
-      .team-card img {
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        margin-bottom: 1rem;
-        border: 3px solid #fff;
-        background: #eee;
-      }
-      .team-card h3 {
-        margin-bottom: 0.3rem;
-        font-size: 1.3rem;
-        color: #000;
-      }
-      .team-card p {
-        font-size: 1.05rem;
-        margin-bottom: 0.5rem;
-        color: #000;
-      }
-      .team-card a {
-        color: #000;
-        font-size: 1em;
-        word-break: break-all;
-      }
-      @media (max-width: 900px) {
-        .team-hero-content { padding: 1.5rem; }
-      }
-      @media (max-width: 600px) {
-        .team-card { width: 95vw; }
-        .team-section h2 {
-          font-size: 6vw !important;
-        }
-        .team-hero-content h2 {
-          font-size: 6vw !important;
-        }
-        .team-section .card {
-          width: 85%;
-        }
-      }
-    </style>
   </head>
   <body>
     <!-- Under Construction Banner -->
@@ -235,68 +43,59 @@
       </div>
     </nav>
     <!-- Hero Section -->
-    <div class="row-section">
-      <div class="team-hero">
-        <div class="team-hero-content">
-          <h2>About The Team</h2>
-          <p>
-            Meet the passionate organizers behind DivHacks 2025! Our team is dedicated to creating an empowering and inspirational space for students who are historically underrepresented in tech. We work together to bring you an unforgettable hackathon experience.
-          </p>
-          <div style="text-align: center;"><a class="learn-more-btn" href="#team-section">↓</a></div>
-        </div>
+    <div class="row-section" id="team-hero">
+      <div class="card" id = "card">
+        <h2><b>ABOUT THE TEAM</b></h2>
+        <p>
+          Meet the passionate organizers behind DivHacks 2025! Our team is dedicated to creating an empowering and inspirational space for students who are historically underrepresented in tech. We work together to bring you an unforgettable hackathon experience.
+        </p>
       </div>
     </div>
     <!-- Team + Contact Info Section -->
-    <div class="row-section" id="team-section">
-      <div class="team-section">
-        <div class="card" id="about-text">
-          <h2>Contact Info</h2>
-          <p>
-            Get to know the DivHacks 2025 organizing team! Reach out to us if you have any questions or want to connect.
-          </p>
-          <div class="team-grid">
-            <div class="team-card">
-              <img src="assets/anita_raj.png" alt="Anita Raj" />
-              <h3>Anita Raj</h3>
-              <p style="font-weight: bold; color: #000;">Executive Lead</p>
-              <a href="mailto:ar4658@columbia.edu">ar4658@columbia.edu</a>
-            </div>
-            <div class="team-card">
-              <img src="assets/jadyn_park.png" alt="Jadyn Park" />
-              <h3>Jadyn Park</h3>
-              <p style="font-weight: bold; color: #000;">Sponsorship Lead</p>
-              <a href="mailto:jsp2226@barnard.edu">jsp2226@barnard.edu</a>
-            </div>
-            <div class="team-card">
-              <img src="assets/lauren_song.png" alt="Lauren Song" />
-              <h3>Lauren Song</h3>
-              <p style="font-weight: bold; color: #000;">Logistics Lead</p>
-              <a href="mailto:ljs2225@columbia.edu">ljs2225@columbia.edu</a>
-            </div>
-            <div class="team-card">
-              <img src="assets/adneen_talib.png" alt="Adneen Talib" />
-              <h3>Adneen Talib</h3>
-              <p style="font-weight: bold; color: #000;">Logistics Lead</p>
-              <a href="mailto:awt2133@barnard.edu">awt2133@barnard.edu</a>
-            </div>
-            <div class="team-card">
-              <img src="assets/leah_kim.png" alt="Leah Kim" />
-              <h3>Leah Kim</h3>
-              <p style="font-weight: bold; color: #000;">Hacker Experience Lead</p>
-              <a href="mailto:lk2935@barnard.edu">lk2935@barnard.edu</a>
-            </div>
-            <div class="team-card">
-              <img src="assets/isabella_lu.png" alt="Isabella Lu" />
-              <h3>Isabella Lu</h3>
-              <p style="font-weight: bold; color: #000;">Publicity Lead</p>
-              <a href="mailto:iel2114@columbia.edu">iel2114@columbia.edu</a>
-            </div>
-            <div class="team-card">
-              <img src="assets/grace_xu.png" alt="Grace Xu" />
-              <h3>Grace Xu</h3>
-              <p style="font-weight: bold; color: #000;">Technical Development Lead</p>
-              <a href="mailto:gx2168@columbia.edu">gx2168@columbia.edu</a>
-            </div>
+    <div class="row-section" id="team-hero">
+      <div class="card">
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="assets/anita_raj.png" alt="Anita Raj" />
+            <div class="team-name">Anita Raj</div>
+            <div class="team-role">Executive Lead</div>
+            <a class="team-email" href="mailto:ar4658@columbia.edu">ar4658@columbia.edu</a>
+          </div>
+          <div class="team-member">
+            <img src="assets/jadyn_park.png" alt="Jadyn Park" />
+            <div class="team-name">Jadyn Park</div>
+            <div class="team-role">Sponsorship Lead</div>
+            <a class="team-email" href="mailto:jsp2226@barnard.edu">jsp2226@barnard.edu</a>
+          </div>
+          <div class="team-member">
+            <img src="assets/lauren_song.png" alt="Lauren Song" />
+            <div class="team-name">Lauren Song</div>
+            <div class="team-role">Logistics Lead</div>
+            <a class="team-email" href="mailto:ljs2225@columbia.edu">ljs2225@columbia.edu</a>
+          </div>
+          <div class="team-member">
+            <img src="assets/adneen_talib.png" alt="Adneen Talib" />
+            <div class="team-name">Adneen Talib</div>
+            <div class="team-role">Logistics Lead</div>
+            <a class="team-email" href="mailto:awt2133@barnard.edu">awt2133@barnard.edu</a>
+          </div>
+          <div class="team-member">
+            <img src="assets/leah_kim.png" alt="Leah Kim" />
+            <div class="team-name">Leah Kim</div>
+            <div class="team-role">Hacker Experience Lead</div>
+            <a class="team-email" href="mailto:lk2935@barnard.edu">lk2935@barnard.edu</a>
+          </div>
+          <div class="team-member">
+            <img src="assets/isabella_lu.png" alt="Isabella Lu" />
+            <div class="team-name">Isabella Lu</div>
+            <div class="team-role">Publicity Lead</div>
+            <a class="team-email" href="mailto:iel2114@columbia.edu">iel2114@columbia.edu</a>
+          </div>
+          <div class="team-member">
+            <img src="assets/grace_xu.png" alt="Grace Xu" />
+            <div class="team-name">Grace Xu</div>
+            <div class="team-role">Technical Development Lead</div>
+            <a class="team-email" href="mailto:gx2168@columbia.edu">gx2168@columbia.edu</a>
           </div>
         </div>
       </div>

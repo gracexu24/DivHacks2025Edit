@@ -182,10 +182,10 @@
   <!-- =============================== About Divhacks ===============================-->
 
   <div class="row-section" id="about">
+    <h2>
+      <b>ABOUT <br>DIVHACKS</b>
+    </h2>
     <div class="card" id="about-text">
-      <h2>
-        <b>ABOUT DIVHACKS</b>
-      </h2>
       <p>
         <span class="highlight">DivHacks</span>, founded in 2017, is Columbia University's premier student-led
         annual diversity hackathon. Over the past seven years, DivHacks has
@@ -196,7 +196,9 @@
         but gives students the tools to use technology to implement change.
       </p>
     </div>
+    <!-- 
     <img src="assets/aboutcard.png" alt="About Card" class="about-card-image">
+    -->
   </div>
 
   <div class="row-section" id="stats">
@@ -235,71 +237,48 @@
 
   <!-- =============================== Tracks - BASIC =============================== -->
   <div class="row-section" id="tracks">
-    <h2><b>TRACKS</b></h2>
-    <div class="tracks-grid">
-      <div class="component_div_left">
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="tracks-section">
+      <h2>
+        <b>TRACKS</b>
+      </h2>
+      <div class="tracks-grid">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="track-content">
-                <p>Productivity</p>
-              </div>
+              <div class="track-title">Productivity</div>
             </div>
             <div class="flip-card-back">
-              <div class="track-description">
-                <h5>Build tools that help people work smarter, live healthier, and learn better in school, the workplace, and everyday life. Empower people to do more in less time.</h5>
-              </div>
+              <div class="track-description">Build tools that help people work smarter, live healthier, and learn better in school, the workplace, and everyday life. Empower people to do more in less time.</div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="component_div_right">
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="track-content">
-                <p>Sustainability</p>
-              </div>
+              <div class="track-title">Sustainability</div>
             </div>
             <div class="flip-card-back">
-              <div class="track-description">
-                <h5>Develop solutions for a greener future, from fighting climate change to improving public health. Think global impact, local action, and tech that drives real social good.</h5>
-              </div>
+              <div class="track-description">Develop solutions for a greener future, from fighting climate change to improving public health. Think global impact, local action, and tech that drives real social good.</div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="component_div_left">
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="track-content">
-                <p>Entertainment</p>
-              </div>
+              <div class="track-title">Entertainment</div>
             </div>
             <div class="flip-card-back">
-              <div class="track-description">
-                <h5>Create the next generation of fun—whether it's games, social platforms, or immersive experiences. Redefine how people play, connect, and express themselves.</h5>
-              </div>
+              <div class="track-description">Create the next generation of fun—whether it's games, social platforms, or immersive experiences. Redefine how people play, connect, and express themselves.</div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="component_div_right">
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="track-content">
-                <p>Emerging Tech</p>
-              </div>
+              <div class="track-title">Emerging Tech</div>
             </div>
             <div class="flip-card-back">
-              <div class="track-description">
-                <h5>Experiment with cutting-edge technology like AI/ML, autonomous systems, spatial computing, XR (VR/AR). Build the unexpected and shape what's next.</h5>
-              </div>
+              <div class="track-description">Experiment with cutting-edge technology like AI/ML, autonomous systems, spatial computing, XR (VR/AR). Build the unexpected and shape what's next.</div>
             </div>
           </div>
         </div>
@@ -1280,6 +1259,19 @@ function slideJudgesCarousel(direction, carouselName, totalSlides) {
 
       window.addEventListener('scroll', handleScroll);
       handleScroll(); // Initial check
+    });
+  </script>
+
+  <script>
+    // Flip card on click for mobile/touch devices
+    document.addEventListener('DOMContentLoaded', function() {
+      if ('ontouchstart' in window || navigator.maxTouchPoints) {
+        document.querySelectorAll('.flip-card').forEach(function(card) {
+          card.addEventListener('click', function() {
+            card.classList.toggle('flipped');
+          });
+        });
+      }
     });
   </script>
 </body>
